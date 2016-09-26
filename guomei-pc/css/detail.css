@@ -1,0 +1,1319 @@
+/*topbar*/
+#box{
+	width: 100%;
+	height: 30px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #f3f3f3;
+}
+.topbar{
+	width: 1200px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+}
+.topbar li{
+	float: left;
+	padding-right: 33px;
+}
+.topbar .mine,.topbar .nav{
+	padding-right: 21px;
+}
+.topbar li a{
+	color: #888;
+}
+.topbar-left li{
+	word-spacing: 10px;
+}
+.topbar-right .order{
+	padding-right: 21px;
+}
+.topbar-right span{
+	border-left: 1px solid #e6e6e6;
+	padding-right: 34px;
+}
+.topbar-left .member,.topbar-right .mine,.topbar-right .service,.topbar-right .nav,.topbar-right .phone{
+	position: relative;
+}
+.member i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg);
+	left: 53px; 
+	top: 13px;
+}
+.mine i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg);
+	left: 53px; 
+	top: 13px;
+}
+.service i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg);
+	left: 87px; 
+	top: 13px;
+}
+.service b{
+	width: 17px;
+	height: 15px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -5px;
+	left: 10px; 
+	top: 8px;
+}
+.nav i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg);
+	left: 53px; 
+	top: 13px;
+}
+.phone i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg);
+	left: 87px; 
+	top: 13px;
+}
+.phone b{
+	width: 13px;
+	height: 18px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -20px;
+	left: 13px; 
+	top: 6px;
+}
+/*header*/
+body a:hover{
+	color: red;
+	text-decoration: underlin
+}
+header{
+	width: 100%;
+	height: 128px;
+	border-bottom: 1px solid #474747;
+}
+.head{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+h1{
+	text-indent: -2000px;
+	width: 166px;
+	height: 47px;
+	background: url(../img/detail/spirit.jpg) 0 -40px;
+}
+.headtop{
+	height: 53px;
+}
+.headtop-left{
+	position: relative;
+}
+.headtop-left a{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	background: url(../img/detail/1.jpg) no-repeat;
+	left: 188px;
+	top: 2px;
+}
+.headtop-mid-top form{
+	width: 500px;
+	height:34px;
+	padding-left: 218px;
+	position: relative;
+}
+.headtop-mid-top i{
+	width: 13px;
+	height: 19px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -90px;
+	left:628px;
+	top: 7px;
+}
+#change{
+	width: 424px;
+	height: 30px;
+	border: 2px solid #e3101e;
+}
+#search{
+	width: 72px;
+	height: 34px;
+	border: none;
+	background-color: #e3101e;
+	font-size: 16px;
+	color: #fff;
+}
+.headtop-mid-bot{
+	padding-top: 7px;
+	padding-left: 218px;
+}
+.headtop-mid-bot a{
+	color: #a5a5a5;
+}
+.headtop-mid-bot a:hover{
+	color: #cc3767;
+}
+.headtop-right{
+	padding-top: 12px;
+	padding-right: 50px;
+	position: relative;
+}
+.headtop-right a{
+	color: #5e5e5e;
+}
+.headtop-right i{
+	width: 35px;
+	height: 38px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -110px;
+	left: -36px;
+	top: -6px;
+}
+.headtop-right b{
+	width: 8px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -150px;
+	left: 77px;
+	top: 16px;
+}
+.headbot{
+	padding-top: 17px;
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+}
+.headbot-left{
+	width: 200px;
+	background-color: #474747;
+	position: absolute;
+	left: 0;
+	top: 16px;
+}
+.headbot-left a{
+	font-size: 16px;
+	color: #fff;
+	margin-left: 8px;
+}
+.headbot-left i{
+	width: 11px;
+	height: 6px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -155px;
+	left: 169px;
+	top: 17px;
+}
+.headbot-right{
+	padding-left: 218px;
+	word-spacing: 37px;
+}
+.headbot-right a{
+	color: #000;
+}
+.calculate,.abroad{
+	position: relative;
+}
+.calculate i{
+	width: 20px;
+	height: 14px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -165px;
+	left: 35px;
+	top: -13px;
+}
+.abroad i{
+	width: 20px;
+	height: 14px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -180px;
+	left: 35px;
+	top: -13px;
+}
+/*main*/
+.main{
+	width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.main-top{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 13px;
+}
+.main-top a{
+	color: #5e5e5e;
+}
+.main-top span{
+	color: #ccc;
+}
+.main-bot-lefttop{
+	width: 358px;
+	height: 358px;
+	border: 1px solid #d9d9d9;
+	position: relative;
+}
+.main-bot-lefttop i{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -290px;
+	right:0;
+	bottom: 0; 
+}
+.main-bot-leftmid{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+.main-bot-leftmid li{
+	width: 52px;
+	height: 52px;
+	border: 1px solid #e6e6e6;
+	margin-right: 10px;
+}
+.main-bot-leftmid .gg,.main-bot-leftmid .hh{
+	position: relative;
+}
+.main-bot-leftmid .gg i{
+	width: 9px;
+	height: 14px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -315px;
+	left: -22px;
+	top: 20px; 
+}
+.main-bot-leftmid .hh i{
+	width: 9px;
+	height: 14px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) -10px -315px;
+	left: 66px;
+	top: 20px; 
+}
+.main-bot-leftbot{
+	height: 36px;
+	line-height: 36px;
+	position: relative;
+}
+.main-bot-leftbot form{
+	margin-left: 20px;
+}
+.main-bot-leftbot span{
+	display: inline-block;
+	margin-right: 40px;	
+}
+.main-bot-leftbot .collect{
+	margin-right: 28px;	
+}
+.get,.wish,.collect{
+	position: relative;
+}
+.get i{
+	width: 16px;
+	height: 11px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -330px;
+	left: -20px;
+	top: 2px; 
+}
+.get b{
+	width: 16px;
+	height: 11px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -330px;
+	left: -20px;
+	top: 14px; 
+}
+.wish i{
+	width: 12px;
+	height: 11px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) -18px -330px;
+	left: -15px;
+	top: 13px; 
+}
+.collect i{
+	width: 13px;
+	height: 12px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) -33px -330px;
+	left: -15px;
+	top: 13px; 
+}
+.main-bot-mid{
+	width: 618px;
+	padding-left: 10px;
+	padding-right: 12px;
+}
+.bot-mid-top{
+	font-size: 16px;
+}
+.bot-mid-top a{
+	display: block;
+}
+.bot-mid-top b{
+	color: #cc0000;
+}
+.bot-mid-top .ttop{
+	color: #333;
+}
+.bot-mid-top .more{
+	display: inline-block;
+	color: #0000ff;
+	text-decoration: underline;
+}
+.bot-mid-top span{
+	margin-top: 20px;
+	width: 618px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 12px;
+	display: block;
+	color: #a5a5a5;
+	background-color: #f8f8f8;
+}
+.bot-mid-top strong{
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 18px;
+	color: #cc0000;
+}
+.main-bot-right{
+	width: 190px;
+}
+.main-bot-right a{
+	display: block;
+}
+.main-bot-right .self{
+	width: 60px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #dd424d;
+	color:#fff;
+}
+.product{
+	margin-top: 5px;
+	height: 68px;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.product a{
+	height: 34px;
+	line-height: 34px;
+	margin-left: 31px;
+}
+.ensure,.return{
+	position: relative;
+}
+.ensure i{
+	width: 23px;
+	height: 25px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -195px;
+	left: -30px;
+	top: 5px;
+}
+.return i{
+	width: 23px;
+	height: 26px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -220px;
+	left: -30px;
+	top: 5px;
+}
+.bot-mid-bot{
+	margin-top: 20px;
+	margin-left: 26px;
+}
+.bot-mid-bot span{
+	height: 32px;
+	line-height: 32px;
+	text-indent: left;
+}
+.bot-mid-bot .goods{
+	width: 52px;
+	color: #a5a5a5;
+}
+.bot-mid-bot .vv{
+	word-spacing: 14px;
+}
+.bot-mid-bot form{
+	margin-left: 16px;
+}
+.order{
+	margin-left: 70px;
+}
+.du{
+	color: #cc0000;
+}
+.assess{
+	color: #0066cc;
+}
+.have{
+	margin-left: 12px;
+}
+.dat22 time{
+	color: #a58888;
+}
+.yy{
+	color: #888;
+}
+.reason{
+	color: #5e5e5e;
+}
+.reason .online{
+	color: #333;
+}
+.det3 a{
+	display: inline-block;
+	position: relative;
+	height: 16px;
+	line-height: 16px;
+	background-color: #f3fcf6;
+	text-align: center;
+}
+.det3 .fu{
+	width: 52px;
+	margin-right: 24px;
+	margin-left: 30px;
+}
+.fu i{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -250px;
+	left:-15px;
+	top: 0;
+}
+.det3 .free{
+	width: 42px;
+}
+.free i{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	background: url(../img/detail/spirit.jpg) 0 -270px;
+	left:-15px;
+	top: 0;
+}
+.det4 a{
+	display: inline-block;
+	width: 52px;
+	height: 70px;
+	margin-right: 4px;
+	border: 1px solid #e7e7e5;
+}
+.det4 a:hover{
+	border: 2px solid #cc0000;
+}
+.det5{
+	margin-top: 13px;
+}
+.det5 a{
+	display: inline-block;
+	width: 86px;
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #e6e6e6;
+	text-align: center;
+	color: #5e5e5e;
+}
+.det5 a:hover{
+	width: 84px;
+	height: 24px;
+	border: 2px solid #cc0000;
+}
+.det6 a{
+	display: inline-block;
+	width: 20px;
+	height: 22px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.det6 .first{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: none;
+}
+.det7 span{
+	color: #cc0000;
+	font-weight: bold;
+}
+.det7 .bb{
+	color: #5e5e5e;
+}
+.select a{
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	margin-right: 10px;
+	color: #fff;
+}
+.select .red{
+	font-weight: bold;
+	width: 110px;
+	background-color: #cc0000;
+}
+.select .blue{
+	font-weight: bold;
+	width: 100px;
+	background-color: #2f7738;	
+}
+.select .ord{
+	width: 98px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+	color: #5e5e5e;
+}
+/*combination*/
+.combination{
+	width: 1198px;
+	height: 280px;
+	border: 1px solid #e0e0e0;
+	margin: 0 auto;
+}
+.comb-left{
+	width: 127px;
+	height: 280px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.comb-left b{
+	color: #cc0000;
+	height: 30px;
+	line-height: 30px;
+	
+}
+.comb-left h4{
+	height: 40px;
+	line-height: 40px;
+	color: #cc0000;
+}
+.comb-left a{
+	color: #5e5e5e;
+}
+.comb strong{
+	width: 52px;
+	margin-top: 100px;
+	margin-left: 14px;
+	margin-right: 20px;
+	font-weight: bold;
+	font-size: 50px;
+	color: #cc0000;
+}
+.comb-mid-top{
+	margin-top: 2px;
+	height: 20px;
+	line-height: 20px;
+}
+.comb-mid-top span{
+	border-right: 1px solid #e0e0e0;
+	margin-right: 10px;
+	margin-left: 3px;
+}
+.comb-mid-top a{
+	color: #0066cc;
+}
+.comb-mid-top a:hover{
+	color: #a5a5b8;
+	font-weight: bold;
+}
+.comb-mid-bot li{
+	width: 125px;
+	margin-right: 25px;
+}
+.comb-mid-bot span:hover{
+	color: #cf2717;
+	text-decoration: underline;
+}
+.comb-mid-bot b{
+	color: #cf2717;
+}
+
+.comb-right strong{
+	width: 60px;
+	margin-top: 100px;
+	font-weight: bold;
+	font-size: 50px;
+	color: #cc0000;
+}
+.comb-right{
+	width: 180px;
+}
+.comb-right-r{
+	width: 150px;
+	margin-top: -100px;
+}
+.comb-right-r span{
+	display: block;
+	height: 32px;
+	line-height: 32px;
+}
+.comb-right-r a{
+	display: block;
+	width: 88px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #cc0000;
+	color: #fff;
+	margin-top: 10px;
+}
+.comb-right-r b{
+	color: #cc0000;
+}
+.down{
+	width: 1200px;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+.left h4,.left .aa{
+	margin-left: 10px;
+}
+.left h4{
+	color: #5e5e5e;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+}
+.classify{
+	width: 208px;
+	height: 65px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.classify a{
+	display: inline-block;
+	width: 95px;
+	color: #5e5e5e;
+	height: 35px;
+	line-height: 35px;
+}
+.similar{
+	margin-top: 10px;
+	width: 208px;
+	height: 282px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.similar h4{
+	margin-bottom: 6px;	
+}
+.similar li{
+	height: 24px;
+	line-height: 24px;
+}
+.similar a{
+	display: inline-block;
+	width: 95px;
+	color: #5e5e5e;
+}
+.skim{
+	margin-top: 10px;
+	width: 208px;
+	height: 28px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+.skim h4{
+	height: 28px;
+	line-height: 28px;
+	margin-left: 10px;
+}
+.buy{
+	margin-top: 2px;
+	width: 208px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	
+}
+.buy li{
+	margin-left: 9px;
+	margin-right: 9px;
+	width: 190px;
+	height: 202px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.buy li:hover{
+	color: #cc0000;
+	text-decoration: underline;
+}
+.buy li a:hover{
+	color: #cc0000;
+	text-decoration: underline;
+}
+.buy span{
+	display: block;
+	font-size: 16px;
+	color: #cc0000;
+	font-weight: bold;
+}
+.buy .text{
+	height: 20px;
+	line-height: 20px;
+	color: #404040;
+}
+.buy .next{
+	border-bottom: none;
+}
+.hot{
+	width: 208px;
+	height: 487px;
+	margin-top: 10px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.hot .common{
+	margin-left: 10px;
+	background-color: #f3f3f3;
+	width: 182px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.common span{
+	border-left: 1px solid #3E4854;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+.common a{
+	display: inline-block;
+	height: 26px;
+	background-color: #f3f3f3;
+}
+.same{
+	width: 188px;
+	height: 725px;
+}
+.same li{
+	margin-left: 10px;
+	width: 188px;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+.same a{
+	width: 82px;
+	height: 70px;
+}
+.same-right{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.same-right a{
+	margin-left: -100px;
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	color: #404040;
+}
+.same-right a:hover{
+	text-decoration: underline;
+}
+.same-right span{
+	display: block;
+	margin-left: -100px;
+	height: 20px;
+	line-height: 20px;
+	color: #e3101e;
+}
+.same .hehe{
+	border-bottom: none;
+}
+.and{
+	width: 208px;
+	margin-top: 10px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.and li{
+	width: 188px;
+	height: 202px;
+	margin-left: 10px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.and span{
+	display: block;
+	font-size: 16px;
+	height: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #cc0000;
+	margin-bottom: 6px;
+}
+.and a{
+	height: 20px;
+	line-height: 20px;
+	color: #404040;
+}
+.and a:hover{
+	text-decoration: underline;
+}
+.and .gold{
+	border-bottom: none;
+}
+.particular{
+	width: 978px;
+	height: 167px;
+	border: 1px solid #e0e0e0;
+}
+.part-top{
+	height: 31px;
+	line-height: 31px;
+	background-color: #f6f6f6;
+}
+.part-top a{
+	display: inline-block;
+	height: 31px;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #7c5a5a;
+}
+.part-top a:hover{
+	color: #cc0000;
+	background-color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-top: 2px solid #cc0000;
+}
+.part-bot{
+	margin-top: 10px;
+}
+.part-bot .li{
+	width: 310px;
+}
+.particular .part-bot span{
+	padding-left: 10px;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	color: #888;
+}
+.rig a{
+	color: #0066cc;
+	margin-top: 3px;
+	margin-left: 908px;
+}
+.rig a:hover{
+	color: #0066cc;
+	text-decoration: underline;
+}
+.bigg-pic{
+	width: 978px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.bigg-pic a{
+	display: block;
+	width: 750px;
+	margin: 0 auto;
+}
+.long{
+	border-bottom: 1px solid #e6e6e6;
+}
+.valuation .top{
+	height: 28px;
+	line-height: 28px;
+	border-bottom: 2px solid #cc0000;
+}
+.valuation .top a{
+	display: inline-block;
+	color: #5e5e5e;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.valuation .top a:hover{
+	color: #fff;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #cc0000;
+}
+.valuation .bot{
+	border: 1px solid #e6e6e6;
+	border-top: none;
+}
+.accord{
+	margin-top: 10px;
+}
+.accord-b{
+	display: block;
+	margin: 0 auto;
+	width: 1198px;
+	height: 254px;
+	border-top: 2px solid #a5a5a5;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.accord-b-header{
+	height: 30px;
+	line-height: 30px;
+}
+.accord-b-header h4{
+	color: #5e5e5e;
+	padding-left: 10px;
+}
+.accord-b-header a{
+	color: #5e5e5e;
+	margin-right: 14px;
+}
+.accord-b li{
+	margin-left: 25px;
+	width: 171px;
+}
+.accord-b li a{
+	height: 18px;
+	line-height: 18px;
+	color: #404040;
+}
+.accord-b li a:hover{
+	color: #CF2717;
+	text-decoration: underline;
+}
+.accord-b li span{
+	display: block;
+	color: #cc0000;
+	font-weight: bold;
+	height: 28px;
+	line-height: 28px;
+}
+
+.late{
+	margin-top: 10px;
+}
+.late-b{
+	margin: 0 auto;
+	width: 1198px;
+	height: 186px;
+	border: 1px solid #e0e0e0;
+}
+.late-b h4{
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+	color: #333;
+}
+.late-b a{
+	display:block;
+	width: 104px;
+	margin-left: 14px;
+	text-align: center;
+}
+.late-b a:hover{
+	color: #CF2717;
+	text-decoration: underline;
+}
+.late-b span{
+	margin-left: 14px;
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #cc0000;
+}
+.ll{
+	width: 1200px;
+	margin: 0 auto;
+}
+.ll a{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	color: #0066cc;
+	margin-left: 25px;
+	position: relative;
+}
+.ll a i{
+	width: 25px;
+	height: 26px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) 0 -215px;
+	left: 0px;
+	top: 10px;
+}
+.foot{
+	width: 1200px;
+	margin: 0 auto;
+}
+.guarantee{
+	width: 1050px;
+	height: 70px;
+	background-color: #efefef;
+	margin: 0 auto;
+	padding-left: 150px;
+}
+.guarantee a{
+	display: inline-block;
+	height: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 200px;
+	position: relative;
+	color: #5d5d5d;
+}
+.guarantee .exchange i{
+	width: 40px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg);
+	left: -48px;
+	top: 15px;
+}
+.guarantee .major i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -40px 0;
+	left: -48px;
+	top: 15px;
+}
+.guarantee .extend i{
+	width: 36px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -75px 0;
+	left: -48px;
+	top: 15px;
+}
+.guarantee .recycle i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -115px 0;
+	left: -48px;
+	top: 15px;
+}
+.guarantee .service i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -150px 0;
+	left: -48px;
+	top: 15px;
+}
+.fot-bot{
+	width: 1170px;
+	margin: 0 auto;
+	padding-left: 16px;
+	height: 165px;
+}
+.fot-bot dl{
+	width: 264px;
+}
+.fot-bot dt{
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	color: #333;
+}
+.fot-bot dd{
+	height: 22px;
+	line-height: 22px;
+	color: #5e5e5e;
+}
+.fot-bot dd:hover{
+	color: #DD424D;
+}
+.fot-bot .help{
+	width: 100px;
+}
+.last{
+	border-top: 2px solid #cc0000;
+	background-color: #f7f7f7;
+}
+.last .search{
+	width: 1200px;
+	margin: 0 auto;
+	height: 149px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.search-left-top{
+	margin-left: 56px;
+	margin-top: 22px;
+}
+.search-left-top li{
+	width: 320px;
+	position: relative;
+}
+.search-left-top a{
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	color: #333;
+	font-size: 16px;
+}
+.search-left-top span{
+	height: 18px;
+	line-height: 18px;
+	color: #999;
+}
+.search-left-top .nn i{
+	width: 42px;
+	height: 45px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) no-repeat;
+	left: -55px;
+	top: 0;
+}
+.search-left-top .bb i{
+	width: 43px;
+	height: 45px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) -45px 0;
+	left: -55px;
+	top: 0;
+}
+.search-left-bot{
+	margin-top: 36px;
+	height: 22px;
+	line-height: 22px;
+}
+.search-left-bot a{
+	display: inline-block;
+	color: #666;
+	margin-right: 14px;
+}
+.search-lefta span{
+	border-left: 1px solid #ccc;
+	margin-right: 14px;
+}
+.search-leftb span{
+	color: #999;
+}
+.search-right{
+	margin-top: 45px;
+}
+.search-right a{
+	display: inline-block;
+	position: relative;
+	margin-left: 25px;
+	color: #999;
+}
+.hao i{
+	width: 29px;
+	height: 23px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) 0 -45px;
+	left: 0;
+	top: -28px;
+}
+.mobile i{
+	width: 39px;
+	height: 16px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) 0 -70px;
+	left: 0;
+	top: -28px;
+}
+.search-right .hao{
+	margin-right: 10px;
+}
+.search-right .clear{
+	display: block;
+	margin-top:50px;
+}
+.solina{
+	width: 1160px;
+	margin: 0 auto;
+	padding-left: 40px;
+}
+.solina a{
+	position: relative;
+}
+.business a{
+	display: inline-block;
+	width: 56px;
+	position: relative;
+	margin-right: 70px;
+	color: #999;
+	margin-top: 10px;
+	height: 18px;
+	line-height: 18px;
+}
+.fomation i{
+	width: 25px;
+	height: 31px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) 0 -180px;
+	right:60px;
+	top: 0;
+}
+.value i{
+	width: 31px;
+	height: 31px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) -25px -180px;
+	right:60px;
+	top: 0;
+}
+.online i{
+	width: 35px;
+	height: 28px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) -60px -180px;
+	right:60px;
+	top: -15px;
+}
+.police i{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) -90px -180px;
+	right:60px;
+	top: 0;
+}
+.solina .happy{
+	font-size: 20px;
+	height: 70px;
+	line-height: 70px;
+	font-weight: bold;
+	color: #a5a5a5;
+	margin-right: 40px;
+}
+.happy i{
+	width: 30px;
+	height: 31px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) -130px -180px;
+	right:-40px;
+	top: 15px;
+}
+.clear i{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	background: url(../img/detail/foot/spirit.jpg) 0 -90px;
+	right:-50px;
+	top: -50px;
+}
