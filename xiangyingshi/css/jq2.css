@@ -1,0 +1,67 @@
+@media screen and (max-width:582px){
+	.topbar-left{
+		display: none;
+	}
+	.topbar-right{
+		width: 96%;
+	}
+	.head{
+		height: 300px;
+	}
+	h1{
+		float: none;
+		width: 100%;
+		height: 50%;
+		margin-left:27%;
+	}
+	.head-right{
+		float: none;
+		width: 100%;
+		height: 50%;
+		margin-left: 10%;
+	}
+	.head-right a{
+		display: block;
+	}
+	#navi{
+		display: none;
+	}
+	.download{
+		background: #0669ad;
+		border: none;
+		box-shadow: none;
+		border-top: none;
+	}
+	.content-bot{
+		border-top: none;
+		box-shadow: none;
+		border-top: none;
+	}
+	.picture{
+		box-shadow: 0 0 2px 2px #074b7a;
+		border-radius: 8px 8px 0 0;
+	}
+	.what{
+		box-shadow: 0 3px 2px 2px #074b7a;
+	}
+	.brief{
+		box-shadow: 0 3px 2px 2px #074b7a;
+		border-radius: 0 0 8px 8px;
+	}
+	.download-left{
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+	.download-left a{
+		margin-left: 10px;
+	}
+	.download form{
+		width: 94%;
+	}
+	.pic li{
+		float: none;
+		width: auto;
+		margin-top: 10px;
+	}
+}

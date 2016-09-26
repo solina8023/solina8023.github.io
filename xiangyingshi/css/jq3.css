@@ -1,0 +1,22 @@
+@media screen and (max-width:462px){
+	.topbar{
+		display: none;
+	}
+	h1{
+		width: 100%;
+		margin-left: 100px;
+	}
+	.head-right{
+		width: auto;
+		margin-left: 4px;
+	}
+	.download-left{
+		display: none;
+	}
+	#navi{
+		display: block;
+		width: 92%;
+		height:20px;
+		margin-left: 3%;
+	}
+}
