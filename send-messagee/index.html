@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				margin: 0 auto;
+				width: 289px;
+				height: 594px;
+				background: url(img/未标题-1.jpg) no-repeat;
+				position: relative;
+			}
+			#boxtop{
+				width: 237px;
+				height: 370px;
+				position: absolute;
+				left: 26px;
+				top: 86px;
+				background: pink;
+				overflow: auto;
+			}
+			#boxbot{
+				width: 237px;
+				height: 42px;
+				border-top: 1px solid #c0c0c0;
+				border-bottom: 1px solid #849ca5;
+				position: absolute;
+				left: 26px;
+				top: 456px;
+				background: #f7f7f7;
+				padding-top: 7px;
+			}
+			#boxbot a{
+				float: left;
+				width: 30px;
+				height: 34px;
+				border: 1px solid #ded6e7;
+				border-radius: 6px;
+				background: url(img/1.jpg) no-repeat;
+				margin-left: 4px;
+			}
+			#text{
+				float: left;
+				width: 140px;
+				height: 32px;
+				border: 1px solid #ded6e7;
+				border-radius: 6px;
+				margin-left: 5px;
+			}
+			#sent{
+				float: right;
+				font-size: 20px;
+				border: none;
+				background: #f7f7f7;
+				margin-top: 6px;
+				color: #a0a0a4;
+				font-weight: bold;
+			}
+			p{
+				margin-left: 5px;
+				margin-right: 5px;
+				line-height: 28px;
+			}
+			.pic1 span{
+				float: left;
+				background: aliceblue;
+			}
+			.pic1 img{
+				float: left;
+			}
+			.pic2 span{
+				float: right;
+				background: lightgreen;
+			}
+			.pic2 img{
+				float: right;
+			}
+			p:after{
+				clear: both;
+				display: block;
+				content:"";
+			}
+			span{
+				width: 180px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="boxtop"></div>
+			<div id="boxbot">
+				<a href="javasrript:;" id="pic"></a>
+				<form>
+					<input type="text" id="text">
+					<input type="button" value="发送" id="sent">
+				</form>
+			</div>
+		</div>
+		<script>
+			var pic = document.getElementById('pic');
+			var text = document.getElementById('text');
+			var sent = document.getElementById('sent');
+			var boxtop = document.getElementById('boxtop');
+			var onOff = "true";
+			pic.onclick = function(){
+				if(onOff){
+					pic.innerHTML = '<img src=img/2.jpg>';
+					onOff = false;	
+				}else{
+					pic.innerHTML = '<img src=img/1.jpg>';
+					onOff = true;
+				}
+			}
+			sent.onclick = function(){
+				if(text.value==""){
+					alert('请输入点内容吧');
+				}else if (onOff){
+					boxtop.innerHTML ='<p class="pic1"> <img src=img/1.jpg> <span>说:' + text.value + '</span></p>' + boxtop.innerHTML;
+				}else{
+					boxtop.innerHTML ='<p class="pic2"> <img src=img/2.jpg> <span>说:' + text.value + '</span></p>' + boxtop.innerHTML;	
+				}
+			}
+		</script>
+	</body>
+</html>

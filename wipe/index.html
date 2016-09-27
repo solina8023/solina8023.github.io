@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+			position: absolute;
+			width: 70px;
+			height: 50px;
+			text-align: center;
+			line-height: 70px;
+			background-color: #ccc;
+		}
+		.active{
+			background-image: url(imgs/5.jpg);
+			background-size: 800px 600px;
+		}
+		</style>
+	</head>
+	<body>
+		<script>
+			var divs = document.getElementsByTagName('div');
+			//生成一个变量，让它的值为空。这样使用的时候数据加载的速度会大大提升。提升性能使用的；
+			//它实际的意义就是document.body.innerHTML;
+			//生成一个变量，让它的长度就是div的总长度，这样写JS的时候就不会把它写死。divs它是一个可以变的数；
+			var len = 100;
+			var str = '';
+			//又要用到一个变量，让它在不断的变化，根据它的变化让for循环里面的i也在不停的变化；
+			var num = -1;
+			//因为要1000个div，所以用到循环
+			for(var i=0;i<len;i++){
+				if(i%10==0){//这是换行的条件,下面就要进行字符串的拼接；
+					num++;//此处的num是个变量，它是在不停的满足条件的情况下不断增加的，一定不要忘记这个！！！
+				//用到判断是因为要和前面的100个div结合起来，让它逢十换行，也就是要把它写成100个div的
+				//样子（当然这里样式是随便写的，为巩固前面的内容，把他们结合起来。）
+				}
+				//num=0的时候，0*60还是等于0.所以第一行是空的，那就从num=-1开始；
+				//接下来就需要一个背景图的定位，背景图定位是和left和top值一一对应的，就像雪碧图，它的值是负的；
+				//字符串拼接的时候一定要把引号一一对应起来；
+				str += '<div style ="left:' +i%10*80+'px;top:'+[num]*60+'px;background-position:'+-i%10*80+'px '+-[num]*60+'px;"></div>'
+			}
+			
+			//主要还是背景图的定位一定要用准确
+			document.body.innerHTML=str;//这句话一定不要忘记写。这是重点！！！
+			for(var i=0;i<len;i++){
+				divs[i].onmouseover = function(){
+					this.className = 'active';
+				}
+			}
+		</script>
+	</body>
+</html>

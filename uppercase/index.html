@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>hded ddewd defewi regrr rgwfw wg9 fef fwwgfww fgpi okk kok kk jjp ijij jioji ihhi huuh huhi hio jjjij
+		huh huhuh huhlo lokoi g8yj hhiuumk jiji9uyy</div>
+		<script>
+			var div = document.getElementsByTagName('div')[0];
+			var str = div.innerHTML;
+			//以空格为分隔符进行分隔；
+			var arr = Array.from(str.split(' '));
+			//console.log(arr)
+			var dada = '';
+			//console.log(arr)
+			var qq = '';
+			for(var i=0;i<arr.length;i++){
+				dada += arr[i].charAt().toUpperCase();
+				qq += dada[i] + arr[i].substring(1)+' ';
+			}
+			div.innerHTML = qq;
+		</script>
+	</body>
+</html>

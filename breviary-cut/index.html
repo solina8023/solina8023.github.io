@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 600px;
+				height: 400px;
+				margin: 50px auto;
+				border: 10px solid #BDCEC6;
+				position: relative;
+			}
+			#box img{
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				text-decoration: none;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				font-size: 30px;
+				color: #0000FF;
+				font-weight: bold;
+				background: #CCCCCC;
+				text-align: center;
+				opacity: .6;
+			}
+			#next{
+				right: 10px;
+			}
+			#prev{
+				left: 10px;
+			}
+			#list{
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+			#list li{
+				width: 30px;
+				height: 30px;
+				list-style: none;
+				background: #CCCCCC;
+				margin-right: 3px;
+				border-radius: 50%;
+				position: relative;
+				display: inline-block;
+			}
+			a:hover{
+				background: #5A94EF;
+			}
+			#list li img{
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				position: absolute;
+				top: -120px;
+				left: -35px;
+			}
+			#list li .active{
+				background: #0000FF;
+			}
+			#list li div{
+				border: 10px solid transparent;
+				border-top-color: #63F7FF;
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 4px;
+				top: -15px;
+			}
+			#list .show{
+				background: indianred;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="imgs/1.jpg" id="img"> 
+			<a href="javascript:;" id="next">></a>
+			<a href="javascript:;" id="prev"><</a>
+			<ul id="list">
+				<li class="show">
+					<!--<img src="imgs/1.jpg">
+					<div></div>-->
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script>
+			var box = document.getElementById('box')
+			var img = document.getElementById('img')
+			var next = document.getElementById('next')
+			var prev = document.getElementById('prev')
+			var lis = document.getElementsByTagName('li')
+			var arr = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg'];
+			var list = document.getElementById('list');
+			var num = 0;
+			var str = '';
+			//把点击上一个和点击下一个的公用样式用函数封装起来，下面用的时候就不用重复写
+			function fn(){
+				lis[num].className= 'show';
+				img.src = 'imgs/'+arr[num];
+			}
+			fn();
+			for(var i=0;i<lis.length;i++){
+				//自定义属性
+				lis[i].index = i;
+				//点击每个li的时候。会发生的一个循环
+				lis[i].onclick = function(){
+					for(var i=0;i<lis.length;i++){
+						//把li的默认样式清空.此处用行间样式是因为鼠标移出的时候已经把
+						//所有的class清除了，这里鼠标点击的时候如果还是给它加的className,
+						//会把
+						lis[i].className = '';
+						lis[i].style.backgroundColor = '';
+					}
+					//arr[this.index]之所以是this.index，跟num没有关系是因为
+					//前面已经lis[i].index = i;要把img的src和li的对应起来。
+					img.src = 'imgs/'+ arr[this.index];
+					this.className ="show";
+					num = this.index;
+				}
+				lis[i].onmouseover = function(){
+					for(var i=0;i<lis.length;i++){
+						//把li的默认样式清空
+						this.className = '';
+					}
+					
+					//此处img的src和上面的路径要相对应，还有，img标签后面是有结束符的，一定要记
+					//这个this.innerHTML就是把小图片和小箭头连接起来的关键
+					this.innerHTML = '<img src="imgs/'+arr[this.index]+'/";><div></div>'
+					this.style.backgroundColor = 'pink';
+				}
+				lis[i].onmouseout = function(){
+					for(var i=0;i<lis.length;i++){
+						//把li的默认样式清空
+//						this.className = '';
+						this.style.backgroundColor = '';
+					}
+					this.innerHTML = '';
+				}
+			}
+			next.onclick = function(){
+				num++;
+				if(num>lis.length-1){
+					num=0
+				}
+				for(var i=0;i<lis.length;i++){
+					lis[i].className = '';
+				}
+				fn();
+			}
+			prev.onclick = function(){
+				num--;
+				if(num<0){
+					num=lis.length-1
+				}
+				for(i=0;i<lis.length;i++){
+					lis[i].className = '';
+				}
+				fn();
+			}
+		</script>
+	</body>
+</html>
