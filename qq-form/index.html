@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="text">
+		<input type="button" value="请输入QQ号码" id="btn">
+		<script>
+		/*先写需要实现的目标：
+			1、qq号中不能包含空格
+			2、不能有小数
+			3、第一位不能是0
+			4、5-10数
+		*/
+			var buts = document.getElementsByTagName('input');
+			buts[1].onclick = function(){
+				var value = buts[0].value;
+				if(isNaN(Number(value))){//当输入的不是数字的时候
+					alert('请确保输入的QQ号码');//分号要正确运用
+					return;
+				}
+				//当输入的内容是空时
+				if(value == ''){
+					alert('没有输入任何内容，请输入正确的QQ号码');
+					return;
+				}
+				//首位为0时
+				if(value[0] === '0'){
+					alert('第一位不能是0')
+					return;
+				}
+				//输入的长度小于5时
+				if(value.length-1<5){
+					alert('你的QQ号码也太短了吧！')
+					return;
+				}	
+				if(value.length>10){
+					alert('您输入的太长了，不会是淘宝账号吧')
+					return;
+				}
+				for(var i=0;i<value.length;i++){
+					//当输入空格时；
+					if(value[i] == ' '){
+						alert('您输入的空格，不在QQ号的范围内');
+						return;
+					}
+					//输入的内容里有小数点时
+					if(value[i] == '.'){
+						alert('您输入的内容里有小数点，不在QQ号的范围内');
+						return;
+					}
+				}
+				alert('输入正确')
+			}
+		</script>
+	</body>
+</html>

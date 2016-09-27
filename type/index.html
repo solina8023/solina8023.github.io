@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="background: pink">
+		
+	<!--//number只能转化纯数字类型的字符串-->
+		<script>
+			var arr = ['100px','abc'-6,[],-98765,34,-2,0,'300', ,
+					function(){alert(1);},null,document,[],true,'200px'-30,
+					'23.45元',5,Number('abc'),function(){alert(1);},'xyz'-90];
+		/*
+		 1、找出数组里的所有数字：-98765,34，-2,0,5；
+		 2、找到可以转成数字的：'100px',-98765,34，-2,0,5,'300','23.45元';
+		 3、把转成数字以后的最大值判断出来：300；
+		 4、把NaN所在的位置判断出来：1  14  17  19
+		 */
+		//第一,找出数组里所有的数字
+		var num1 = '';
+		var num2 = '';
+		var num22 = '';
+		var num4 = '';
+//		var arr2 = [];
+		var max = arr[0];
+		var str1 = '';
+		for(var i=0;i<arr.length;i++){
+			//typeof数组里面的值、并且时能是数字的话就要求它不仅运算数相等而且它的数据类型也相等；
+			//number是先把所有的强制转化成数字，&&两边的值都为true的时候它才会成立；
+			/*isNaN（arr[i]）判断括号里的内容是不是数字，如果是，isNaN它的值就是false,
+			它取反就是真的，等号两边都是真的的时候&&才会成立。
+			*/
+			if(typeof(arr[i])==='number' && !isNaN(arr[i])){
+				num1 += arr[i]+'、';
+			}
+			if(typeof(arr[i])=='string'||'number' && !isNaN(parseFloat(arr[i]))){
+				num2 += arr[i]+'、';
+			}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+			//parseFloat(arr[i])是取出数组里的数字，得到的是数字，inNaN后得到的是一个为false
+			//的布尔值，布尔值取反即为TRUE，即会执行{}里的代码
+			if(!isNaN(parseFloat(arr[i]))){//第二种方法
+				num22 += arr[i]+'、';
+			}
+			
+			for(var j=0;j<arr.length;j++){
+				if(max<arr[j] && !isNaN(parseFloat(arr[j]))){
+					max=arr[j];
+				}
+				
+			}
+//			NaN不等于它自身，所以数组里的哪一个不等于它自己的话就是NaN的位置
+			if(arr[i]!=arr[i]){
+			num4 += i+'、';	
+			}
+			
+		};
+//			var p=0;
+//			for(var i=0;i<arr.length;i++){
+//				if(isNaN(parseFloat(arr[i])) ==false){//第二种方法
+//					arr2[p]=parseFloat(arr[i]);
+//					p++;
+//				}
+//			}
+//			var max = arr2[0];
+//			for(var j=0;j<arr2.length;j++){
+//				if(arr2[j]>max){
+//					max=arr2[j];
+//				}
+//			}
+			document.body.innerHTML += '把转成数字以后的最大值判断出来:'+ max + "</br></br>";
+			document.body.innerHTML += '找出数组里的所有数字:' + num1 + '</br></br>';
+			document.body.innerHTML += '找到可以转成数字的:' + num2 + '</br></br>';
+			document.body.innerHTML += '找到可以转成数字的:' + num22 + '</br></br>';
+			document.body.innerHTML += '把转成数字以后的最大值判断出来:'+ max + '</br></br>';
+			document.body.innerHTML += '把NaN所在的位置判断出来:' + num4 + '</br></br>';
+		</script>
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			li{
+				list-style: none;
+				cursor: pointer;	
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				border: 5px solid #E7E7E7;
+				height:400px;
+				width: 800px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			#box>ul{
+				width:100px;
+				height: 100%;
+				float: left;
+			}
+			#box>ul li{
+				line-height: 99px;
+				text-align: center;
+				background-color: #000;
+				border-bottom: 1px solid #E7E7E7;
+				color:white;
+			}
+			#box>ul .active{
+				background-color: red;
+				color:black;
+			}
+			#box div{
+				float: left;
+				width: 700px;
+				height: 100%;
+				position: relative;
+				display: none;
+			}
+			#box img{
+				width: 100%;
+				height: 100%;
+			}
+			#box div ul{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			#box div li{
+				float: left;
+				border-right: 1px solid white;
+				background-color: black;
+				opacity: .7;
+				line-height: 30px;
+				margin-right: -1px;
+				color:white;
+				text-align: center;
+			}
+			#box div .active{
+				background-color: #EF3163;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			var arr=[
+				[ "暖色调", ["暖色键盘","惬意时光","午后","一杯苦咖啡"],["images/img1.gif",
+				"images/img2.gif","images/img3.gif","images/img4.gif"]],
+			
+				["金色夕阳",["街边夕阳","金色稻草"],["images/img5.gif","images/img6.gif"]],
+			
+				["灰色格调",["灰色通讯","咖啡'配'饼干","孤单键盘","枯树"],["images/img7.gif",
+				"images/img8.gif","images/img9.gif","images/img10.gif"]],
+			
+				["baby",["baby素材一","baby素材二"],["images/img11.gif","images/img12.gif"]]
+				];
+				
+			/*需求
+			 * 1、先把所有的样式都实现：
+			 * 2、点击ul下的li的时候，li的颜色发生变化，div也发生变化
+			 * 3、点击右边li的时候，li的颜色发生变化，img的src发生变化
+			 * 4、实现所有的样式后，进行传参；
+			 */
+			var box = document.getElementById('box');
+			//获取到元素后，生成所有的样式；
+			var str = '<ul>';//生成左边的所有ul下的li;因为ul只有一个，li有
+			//好几个，所以先把ul的开始写在外面，li写在for循环里；
+			var str1 = '';//生成右边的div
+			for(var i=0;i<arr.length;i++){//i<数组的长度；
+				//arr[i][0]就是数组里面的第一个值，也就是li的具体内容；
+				str += '<li>'+arr[i][0]+'</li>';
+				//arr[i][2][0]这里取的是它的默认值
+				str1 += '<div><img src ="'+arr[i][2][0]+'"><ul>';
+				//因为ul下的li有多个，又要产生新的循环；
+				//这里之所以是arr[i][1]，是因为取到的是每组数组里的第一个的值；
+				for(var j=0;j<arr[i][1].length;j++){//li的宽度写完后一定不要忘记写单位；
+					str1 += '<li style="width:'+(700/arr[i][1].length)+'px;">'+arr[i][1][j]+'</li>'
+				}
+				str1 += '</ul></div>';//右边的li已经在循环里生成；ul和div结束
+			}
+			str += '</ul>';//左边的ul结束；
+			box.innerHTML = str + str1;
+			//当然，上面一句也可以写成：
+//			 str += '</ul>'+str1;这样看起来比较方便，但是用起来
+//			 box.innerHTML = str//会觉得有些难以理解
+			//字符串拼接完成，现在开始获取元素
+			//有点长，但是也很容易理解，就是在box下获取到的第一个ul下的li;
+			var lis = box.getElementsByTagName('ul')[0].getElementsByTagName('li');
+			var divs = box.getElementsByTagName('div');
+			var li = divs[0].getElementsByTagName('li');//第一个下面的
+			var img = divs[0].getElementsByTagName('img');
+			//先获取一部分需要用到的元素，后面需要在继续获取
+			//后面的事件都是在不断的发生的，所以要放在一个循环里
+			//先写点击左侧的li发生的事件
+			lis[0].className = 'active';
+			divs[0].style.display = 'block';
+			for(var i=0;i<lis.length;i++){
+				//点击li的时候，li的className发生变化，div的样式也发生变化
+				//div开始都是隐藏的，需要把它调用出来；
+				lis[i].index = i;
+				lis[i].onclick = function(){
+					for(var i=0;i<lis.length;i++){
+						lis[i].className = '';
+						divs[i].style.display = 'none';
+					}
+					this.className = 'active';
+					//需要用到div和li的一一对应关系，所以此处要建立以个索引值；
+					divs[this.index].style.display = 'block';
+				};
+			}
+			//点击右面的li发生的事件：
+			
+//			for(var i=0;i<li.length;i++){
+//				//点击右面的li的时候，li的className发生变化，
+//				//img的src也发生相应的变化；
+//				li[i].act = i;
+//				li[i].onclick = function(){
+//					for(var i=0;i<li.length;i++){
+//						li[i].className = '';
+//					}
+//					this.className = 'active';
+//					//需要把图片和li对应起来，又要建立一个索引、
+//					//这里在写第一组，只能是第一组的第二个的当前
+//					imgs[0].src = arr[0][2][this.act];
+//				}
+//			}
+			//写完了所有的样式，现在开始传参、因为所有发生的变化都是
+			//右边的div在发生变化，所以只需要把右边的部分传参即可；
+			
+			for(var i=0;i<divs.length;i++){
+//				fn(divs[i]);//实参
+				fn(i)//需要用到的是下标的时候就只需要写出来下标，写出
+				//全部的会一直报错而且显示不出来；
+			}
+			function fn(pp){//形参
+				var li = divs[pp].getElementsByTagName('li');
+				var img = divs[pp].getElementsByTagName('img');
+				li[0].className = 'active';
+				for(var i=0;i<li.length;i++){
+					//点击右面的li的时候，li的className发生变化，
+					//img的src也发生相应的变化；
+					li[i].act = i;
+					li[i].onclick = function(){
+						for(var i=0;i<li.length;i++){
+							li[i].className = '';
+						}
+						this.className = 'active';
+						//需要把图片和li对应起来，又要建立一个索引、
+						//这里在写第一组，只能是第一组的第二个的当前
+						img[0].src = arr[pp][2][this.act];
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
