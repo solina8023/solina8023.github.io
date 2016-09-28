@@ -1,0 +1,154 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width:600px;
+		height: 500px;
+		margin: 0 auto;
+		border: 5px solid #ccc;
+	}
+	#tab span{
+		line-height: 40px;
+		width: 90px;
+		display: inline-block;
+		position: relative;
+	}
+	#tab span i{
+		font-style: normal;
+		color:red;
+		position: absolute;
+		top:0;
+		right: 0;
+		cursor: pointer;
+	}
+	#content div{
+		font-size: 30px;
+		line-height: 460px;
+		text-align: center;
+		display: none;
+		background-color: #ccc;
+	}
+	#content .show{
+		display: block;
+	}
+	#tab .active{
+		background-color: #ccc;
+		color: white;
+	}
+	p{
+		margin: 0;
+	}
+</style>
+<script type="text/javascript">
+	/*
+		1、添加选项卡
+		2、实现选项卡的功能
+		3、删除选项卡
+	*/
+</script>
+</head>
+
+<body>
+	<a href="javascript:;">document1</a>
+	<a href="javascript:;">document2</a>
+	<a href="javascript:;">document3</a>
+	<a href="javascript:;">document4</a>
+	<a href="javascript:;">document5</a>
+	<div id="box">
+		<div id="tab">
+			<!--<button class="active">选项1</button>
+			<button>选项2</button>
+			<button>选项3</button>
+			<button>选项4</button>
+			<button>选项5</button> -->
+		</div>
+		<div id="content">
+			<!--<div class="show">内容1</div>
+			<div>内容2</div>
+			<div>内容3</div>
+			<div>内容4</div>
+			<div>内容5</div> -->
+		</div>
+	</div>	
+</body>
+<script>
+	var tab = document.getElementById('tab');
+	var as = document.getElementsByTagName('a');
+	var btn = document.getElementsByTagName('button');
+	var content = document.getElementById('content');
+	var div = content.getElementsByTagName('div');
+	var box = document.getElementById('box');
+	//var onOff = true;
+	var data = [
+		{
+			"name":"document1",
+			"content":"This is the content of document1"
+		},
+		{
+			"name":"document2",
+			"content":"This is the content of document2"
+		},
+		{
+			"name":"document3",
+			"content":"This is the content of document3"
+		},
+		{
+			"name":"document4",
+			"content":"This is the content of document4"
+		},
+		{
+			"name":"document5",
+			"content":"This is the content of document5"
+		}
+	]
+	for(var i = 0;i<as.length;i++){
+		as[i].index = i;
+		as[i].onclick = function(){
+			if(this.onOff)return;
+			var span = document.createElement('span');
+			var p = document.createElement('p');
+			p.innerHTML = data[this.index].name;
+			span.appendChild(p);
+			span.className = 'active';
+			this.onOff = true;
+			var on = this;
+			p.onclick = function(){
+				for(var i = 0;i<tab.children.length;i++){
+					tab.children[i].className = "";
+					content.children[i].className ="";
+				}
+				this.className = "active";
+				div.className = "show";
+			}
+			var is = document.createElement('i');
+			is.innerHTML = "×";
+			is.onclick = function(){
+				if(span.className == "active"){
+					tab.children[0].className = "active";
+					content.children[0].className = "show";
+				}
+				div.style.display = "none";
+				tab.removeChild(this.parentNode);
+				on.onOff = false;
+				//tab.removeChild(div)
+			}
+			span.appendChild(is);
+			tab.appendChild(span);
+			var div = document.createElement('div');
+			div.innerHTML = data[this.index].content;
+			div.className = "show";
+			content.appendChild(div);
+			
+			for(var i = 0;i<tab.children.length;i++){
+				tab.children[i].className = "";
+				content.children[i].className ="";
+			}
+			span.className = 'active';
+			div.className = "show";
+		}
+	}
+</script>
+</html>

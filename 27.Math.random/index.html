@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="tween.js"></script>
+		<script type="text/javascript" src="mTween.js"></script>
+		<style>
+			ul{
+				margin: 20px auto 0;
+				padding: 0;
+				width: 600px;
+			}
+			li{
+				list-style: none;
+				float: left;
+				width: 280px;
+				margin: 0 10px;
+				position: relative;
+				height: 120px;
+				overflow: hidden;
+			}
+			img{
+				height: 120px;
+				width: 280px;
+			}
+			div{
+				position: absolute;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div>
+					<img src="img/1.jpg" alt="">
+					<img src="img/2.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/3.jpg" alt="">
+					<img src="img/4.jpg" alt="">
+					<img src="img/6.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/5.jpg" alt="">
+					<img src="img/6.jpg" alt="">
+					<img src="img/7.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/7.jpg" alt="">
+					<img src="img/8.jpg" alt="">
+					<img src="img/5.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/2.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/4.jpg" alt="">
+					<img src="img/3.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/8.jpg" alt="">
+					<img src="img/7.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/6.jpg" alt="">
+					<img src="img/5.jpg" alt="">
+				</div>
+			</li>
+		</ul>
+		<script>
+		//
+			var divs = document.getElementsByTagName('div');
+			var imgs = divs[0].getElementsByTagName('img');
+			var height = parseFloat(getComputedStyle(imgs[0]).height);
+			console.log(height)
+			var len;
+			function fn(obj,len){
+				
+				setTimeout(function(){
+					obj.num += obj.n;
+					
+					if(obj.num == len-1){
+						obj.n = -1;
+					}
+					if(obj.num == 0){
+						obj.n = 1;
+					}
+					mTween(obj,'top',-height*obj.num,300,'linear',function(){
+						fn(obj,len);
+					})
+				},Math.random()*2000+1000)
+			}
+			
+			for(var i=0;i<divs.length;i++){
+				var imgs = divs[i].getElementsByTagName('img');
+				len = imgs.length;
+				divs[i].num = 0;
+				//n是让图片一张一张的走，等于1的时候上去，-1的时候下来；
+				divs[i].n = 1;
+				fn(divs[i],len);
+			}
+		</script>
+	</body>
+</html>

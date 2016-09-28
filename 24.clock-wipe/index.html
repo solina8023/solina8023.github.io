@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="tween.js"></script>
+		<script type="text/javascript" src="mTween.js"></script>
+		<style>
+			body{
+				margin: 0;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+				float: left;
+				width: 50px;
+				position: relative;
+				overflow: hidden;
+				height: 70px;	
+			}
+			div{
+				position: absolute;
+				top: 0;
+			}
+			img{
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<img src="img/c.jpg" alt="">
+			</li>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<img src="img/c.jpg" alt="">
+			</li>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="img/0.jpg" alt="">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+		</ul>
+		<script>
+			var divs = document.getElementsByTagName('div');
+			var imgs = document.querySelectorAll('div img');
+			var imgs2 = document.querySelectorAll('li>img');
+			//获取时间div[0]，把他们用函数包起来，下面用到的时候方便调用；
+			var date = new Date();
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			var time1 = totwo(h)+totwo(m)+totwo(s);
+			//补0；
+			function totwo(n){
+				return n<10? '0'+n:''+n;
+			}
+			
+			//初始化，确保刷新的时候时间就是现在的时间；
+			for(var i=0;i<divs.length;i++){
+				divs[i].getElementsByTagName('img')[0].src = 'img/'+time1[i]+'.jpg';
+			}
+			
+			//添加定时器
+			setInterval(function(){
+				//获取到div[1]的时间
+				var date = new Date();
+				var h = date.getHours();
+				var m = date.getMinutes();
+				var s = date.getSeconds();
+				var time2 = totwo(h)+totwo(m)+totwo(s);
+				//开始让两个点闪烁
+				for(var i=0;i<imgs2.length;i++){
+					imgs2[i].src = 'img/b.jpg';
+				}
+				//延迟半秒
+				setTimeout(function(){
+					for(var i=0;i<imgs2.length;i++){
+					imgs2[i].src = 'img/c.jpg';	
+					}
+				},500)
+				
+				for(var i=0;i<divs.length;i++){
+					divs[i].getElementsByTagName('img')[1].src = 'img/'+time2[i]+'.jpg';
+					divs[i].getElementsByTagName('img')[0].src = 'img/'+time1[i]+'.jpg';
+					
+				}
+				//让时间走
+				function fb(b){//传进来的是i
+					if(divs[b].getElementsByTagName('img')[1].src != divs[b].getElementsByTagName('img')[0].src){
+						mTween(divs[b],'top',-70,300,'linear',function(){
+							divs[b].getElementsByTagName('img')[0].src = 'img/'+time1[b]+'.jpg';
+							divs[b].style.top='';
+						});
+					}
+					time1 = totwo(h)+totwo(m)+totwo(s)
+				}
+				//传参
+				for(var i=0;i<divs.length;i++){
+					fb(i);
+				}
+			},1000);
+		</script>
+	</body>
+</html>
