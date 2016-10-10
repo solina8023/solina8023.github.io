@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+		. 表示除了换行之外的任意字符
+		[^a-z]  ^在范围中代表取非，在整个表达式中表示行首
+		[1abc]
+	*/
+	var s1 = '2016--08--09';
+	var s2 = '2016/08/09';
+	var s3 = '2016.08.09';
+	var re = /^(\d+)\D+(\d+)\D+(\d+)$/;
+	// 2016年08月09日
+
+	var str = s3.replace(re,function($0,$1,$2,$3){
+		//console.log(arguments);
+		return $1+'年'+$2+'月'+$3+'日';
+	});
+	document.body.innerHTML = str;
+	</script>
+</body>
+</html>

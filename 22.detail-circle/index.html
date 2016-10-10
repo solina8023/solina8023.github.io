@@ -51,8 +51,8 @@
 			<p>这是内容1</p>
 		</div>
 	</body>
+	<script src="tween.js" type="text/javascript" charset="utf-8"></script>	
 	<script src="mTween.js" type="text/javascript" charset="utf-8"></script>
-	<script src="tween.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var box = document.getElementById('box');
 		var img = document.getElementById('img');
@@ -79,7 +79,7 @@
 			})
 			//改变描述内容。
 			mTween(p,'bottom',-80,500,'linear',function(){
-				p.innerHTML = '这是内容'+(num+1);
+				p.innerHTML = '这是图片'+(num+1);
 				mTween(p,'bottom',0,500,'linear');
 			})
 		}
