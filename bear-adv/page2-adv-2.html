@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: plum;
+			}
+			.bg2{
+				background: url(imgs/about/bg.png);
+				height: 620px;
+				width: 1000px;
+				position: absolute;
+				top: 10px;
+				left: 200px;
+			}
+			.close{
+				width: 43px;
+				height: 43px;
+				position: absolute;
+				top: 6%;
+				left: 92%;
+				transition: 1s;
+				z-index: 11;
+			}
+			.close:hover{
+				transform: rotateZ(360deg);
+			}
+			.close img{
+				width: 43px;
+				height: 43px;
+				z-index: 11;
+			}
+			#boxb{
+				width: 710px;
+				height: 395px;
+				position: absolute;
+				top: 20%;
+				left: 10%;
+				display: block;
+			}
+			#boxb .prev{
+				display: block;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 40%;
+				left: -40px;
+			}
+			#boxb .next{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 40%;
+				right: -20%;
+			}
+			.prev:hover{
+				background: orange;
+				border-radius: 50%;
+				opacity: .4;
+			}
+			.next:hover{
+				background: orange;
+				border-radius: 50%;
+				opacity: .4;
+			}
+			.bg2 .mains{
+				width: 865px;
+				height: 534px;
+				position: absolute;
+				top: -18%;
+				left: -3%;
+			}
+			.bg2 .mains img{
+				width: 865px;
+				height: 534px;
+			}
+			.close{
+				width: 43px;
+				height: 43px;
+				position: absolute;
+				top: 6%;
+				left: 92%;
+				transition: 1s;
+				z-index: 11;
+			}
+			.close:hover{
+				transform: rotateZ(360deg);
+			}
+			.close img{
+				width: 43px;
+				height: 43px;
+				z-index: 11;
+			}
+			.dis{
+				list-style: none;
+				position: absolute;
+				top: 470px;
+				left: 46px;
+			}
+			.dis li{
+				float: left;
+			}
+			.dis a{
+				display: block;
+				background: pink;
+				z-index: 5;
+				opacity: 0;
+			}
+			.dis_left{
+				width: 700px;
+			}
+			.dis_left a{
+				float: left;
+				width: 156px;
+				height: 40px;
+				margin-right: 18px;
+				margin-bottom: 15px;
+				border-radius: 20px;
+			}
+			.dis_right a{
+				width: 150px;
+				height: 90px;
+				border-radius: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg2">
+			<div class="close">
+				<a href="javascript:;" class="turn">
+					<img src="imgs/about/close.png" alt="" />
+				</a>
+			</div>
+			<div id="boxb">
+				<img src="imgs/about/b1.png" alt="" / class="mains">
+				<a href="javascript:;" class="prev">
+					<img src="imgs/about/la.png" alt="" />
+				</a>
+				<a href="javascript:;" class="next">
+					<img src="imgs/about/ra.png" alt="" />
+				</a>
+			</div>
+			<ul class="dis">
+				<li class="dis_left">
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+					<a href="javascript:;"><img src="" alt=""/></a>
+				</li>
+				<li class="dis_right">
+					<a href="javascript:;"><img src="" alt=""/></a>
+				</li>
+			</ul>
+		</div>
+		<script>
+			var bg2 = document.getElementsByClassName('bg2')[0];
+			var close2 = bg2.getElementsByClassName('close')[0];
+			var turn2 = close2.getElementsByClassName('turn')[0];
+			var boxb = document.getElementById('boxb');
+			var mains2 = boxb.getElementsByClassName('mains')[0];
+			var prev2 = boxb.getElementsByClassName('prev')[0];
+			var next2 = boxb.getElementsByClassName('next')[0];
+			var arrb = ['b1.png','b2.png','b3.png','b4.png','b5.png','b6.png','b7.png','b8.png','b9.png'];
+			var num = 0;
+			next2.onclick = function(){
+				num++;
+				if(num>arrb.length-1){
+					num = 0;
+				}
+				mains2.src = 'imgs/about/' + arrb[num];
+			};
+			prev2.onclick = function(){
+				num--;
+				if(num<0){
+					num = arrb.length-1
+				}
+				mains2.src = 'imgs/about/' + arrb[num];
+			};
+			var dis = document.getElementsByClassName('dis')[0];
+			var as2 = dis.getElementsByTagName('a');
+			for(var i=0;i<as2.length;i++){
+				as2[i].index = i;
+				as2[i].onclick = function(){
+					num = this.index;
+					mains2.src = "imgs/about/" + arrb[this.index];
+				}
+			}
+			as2[8].onclick = function(){
+				var music = new Audio("mp3/爱情转移.mp3");
+				music.play();
+				mains2.src = "imgs/about/" + arrb[this.index];
+			};
+			//点击关闭按钮的时候
+			var turn2 = document.getElementsByClassName('turn')[0];
+			turn2.onclick = function(){
+				bg2.style.display = 'none';
+				btn.style.display = 'block';
+			};
+		</script>
+	</body>
+</html>

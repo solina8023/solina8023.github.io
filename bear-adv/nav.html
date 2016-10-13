@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			a{
+				color: #6f4b3e;
+			}
+			.toc{
+				position: absolute;
+				top: 0;
+				z-index: 99;
+			}
+			#page{
+				padding: 60px 0;
+				width: 15%;
+				position: fixed;
+			}
+			#menu{
+				position: fixed;
+				visibility: visible;
+				display: inline;
+				z-index: 500;
+			}
+			#menu div{
+				width: 120px;
+				height: 105px;
+				position: relative;
+				padding: 0;
+			}
+			#menu div .jqDock{
+				width: 120px;
+				height: 105px;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 5;
+				left: 0;
+				overflow: visible;
+			}
+			.jqDockMouse{
+				padding: 0;
+				margin: 0;
+				position: relative;
+				filter: inherit;
+				background-color: transparent;
+			}
+			.jqDockMouse div{
+				width: 120px;
+				height: 49px;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				filter: inherit;
+				background-color: transparent;
+			}
+			#m2,#m3{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				padding: 0;
+				margin: 3px;
+				vertical-align: top;
+				filter: inherit;
+				display: block;
+			}
+			.jqDockLabel{
+				position: absolute;
+				margin: 0;
+				display: none;
+				filter: inherit;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<span id="page" class="toc">
+			<span id="menu">
+				<div class="jqDockWrap">
+					<div id="jqDock" class="jqDock0">
+						<div class="jqDockItem jqDockMouse0">
+							<div>
+								<a href="#item2" id="m2">
+									<img src="imgs/nav_a.png" alt="" />
+									<div class="jqDockLabel jqDockLabelLink">
+										<div class="jqDockLabelText"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="jqDockItem jqDockMouse1">
+							<div>
+								<a href="#item3" id="m3">
+									<img src="imgs/nav_b.png" alt="" />
+									<div class="jqDockLabel jqDockLabelLink">
+										<div class="jqDockLabelText"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="jqDockItem jqDockMouse2">
+							<div>
+								<a href="#item4" id="m4">
+									<img src="imgs/nav_e.png" alt="" />
+									<div class="jqDockLabel jqDockLabelLink">
+										<div class="jqDockLabelText"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="jqDockItem jqDockMouse3">
+							<div>
+								<a href="#item5" id="m5">
+									<img src="imgs/nav_f.png" alt="" />
+									<div class="jqDockLabel jqDockLabelLink">
+										<div class="jqDockLabelText"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="jqDockItem jqDockMouse4">
+							<div>
+								<a href="#item1" id="m1">
+									<img src="imgs/nav_g.png" alt="" />
+									<div class="jqDockLabel jqDockLabelLink">
+										<div class="jqDockLabelText"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</span>
+		</span>
+	</body>
+</html>

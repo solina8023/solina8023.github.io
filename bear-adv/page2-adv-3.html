@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: powderblue;
+			}
+			ul{
+				list-style: none;
+			}
+			.bg3{
+				width: 800px;
+				height: 500px;
+				position: absolute;
+				top: 80px;
+				left: 260px;
+				border-radius: 20px;	
+			}
+			.bg4{
+				background: #fff;
+				width: 840px;
+				height: 500px;
+				position: absolute;
+				top:0;
+				left: 0;
+				border-radius: 20px;
+				opacity: .4;	
+			}
+			.close{
+				width: 43px;
+				height: 43px;
+				position: absolute;
+				top: 2%;
+				left: 98%;
+				transition: 1s;
+			}
+			.close:hover{
+				transform: rotateZ(360deg);
+			}
+			.close img{
+				width: 43px;
+				height: 43px;
+			}
+			.list{
+				position: absolute;
+				left: -43px;
+				top: -69px;
+			}
+			.list li{
+				width: 170px;
+				height: 69px;
+				float: left;
+				margin-right: 4px;
+			}
+			.list li:nth-of-type(1){
+				background: url(imgs/about/3a_01.png) no-repeat;
+			}
+			.list li:nth-of-type(2){
+				background: url(imgs/about/3_02.png) no-repeat;
+			}
+			.list li:nth-of-type(3){
+				background: url(imgs/about/3_03.png) no-repeat;
+			}
+			.list li:nth-of-type(4){
+				background: url(imgs/about/3_04.png) no-repeat;
+			}
+			.list li:nth-of-type(1):hover{
+				background: url(imgs/about/3a_01.png) no-repeat;
+			}
+			.list li:nth-of-type(2):hover{
+				background: url(imgs/about/3a_02.png) no-repeat;
+			}
+			.list li:nth-of-type(3):hover{
+				background: url(imgs/about/3a_03.png) no-repeat;
+			}
+			.list li:nth-of-type(4):hover{
+				background: url(imgs/about/3a_04.png) no-repeat;
+			}
+			.pict{
+				width: 720px;
+				height: 440px;
+				border-radius: 30px;
+				position: absolute;
+				left: 30px;
+				top: 20px;
+				background: #fff;
+				z-index: 10;
+				overflow: scroll;
+			}
+			.pict li{
+				float: left;
+				margin-right: 4px;
+				width: 510px;
+			}
+			.pict li:nth-of-type(1){
+				background: url(imgs/about/a3_1.png) no-repeat;
+			}
+			/*.pict li:nth-of-type(2){
+				background: url(imgs/about/a3_2.png) no-repeat;
+			}
+			.pict li:nth-of-type(3){
+				background: url(imgs/about/a3_3.png) no-repeat;
+			}
+			.pict li:nth-of-type(4){
+				background: url(imgs/about/a3_4.png) no-repeat;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="bg3">
+			<div class="bg4"></div>
+			<div class="close">
+				<a href="javascript:;" class="turn">
+					<img src="imgs/about/close.png" alt="" />
+				</a>
+			</div>
+			<ul class="list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="pict">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>
