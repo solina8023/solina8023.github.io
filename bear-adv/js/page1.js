@@ -33,8 +33,3 @@ setInterval(function(){
 		airplane.style.right = '-300px';
 	},6000)
 },9000)
-//草地
-var mountain1 = document.getElementById('mountain1');
-var mountain2 = document.getElementById('mountain2');
-var mountain3 = document.getElementById('mountain3');
-var mountain = document.getElementById('mountain-dis');

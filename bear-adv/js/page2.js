@@ -4,7 +4,6 @@ var bg = document.querySelector('.bg');
 var bg2 = document.getElementsByClassName('bg2')[0];
 var bg3 = document.getElementsByClassName('bg3')[0];
 var text = document.getElementsByClassName('text')[0];
-//console.log(lis[0]);
 //点击li的时候广告定位出现
 lis[0].onclick = function(){
 	circle.style.display = 'none';
@@ -48,11 +47,10 @@ lis[2].onclick = function(){
 	}
 //落雨的过程
 var rain = document.getElementById('raining');
-rain.style.top = '0';
+rain.style.top = '-150px';
 setInterval(function(){
-	mTween(rain,'top',100,500,'linear',function(){
+	mTween(rain,'top',137,900,'linear',function(){
 		rain.style.top = '0';
-		mTween(rain,'top',100,500,'linear')
-		console.log(rain)
+		mTween(rain,'top',137,900,'linear')
 	})
-},1000)
+},950)
