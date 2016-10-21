@@ -1,0 +1,33 @@
+body{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearFix:after{
+	content: ;
+	display: block;
+	clear: both;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
