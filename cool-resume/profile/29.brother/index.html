@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				margin: 0;
+			}
+			li{
+				list-style: none;
+				width: 260px;
+				height: 40px;
+				background: #DDD;
+				font-size: 20px;
+				line-height: 40px;
+				text-indent: 20px;
+				color: #555;
+				font-weight: bold;
+			}
+			.none{
+				background: #333;
+				color: #fff;
+			}
+			.active{
+				background: orange;
+				color: #fff;
+			}
+			.show{
+				background: #666;
+				font-size: 26px;
+				color: #fff;
+			}
+			.site{
+				background: #999;
+				font-size: 20px;
+				color: dodgerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			<li class="none">这是首行</li>
+			<li>111111</li>
+			<li>222222</li>
+			<li>333333</li>
+			<li>444444</li>
+			<li>555555</li>
+			<li>666666</li>
+			<li>777777</li>
+			<li>888888</li>
+			<li>999999</li>
+			<li>000000</li>
+			<li class="none">这是末行</li>
+		</ul>
+		<script>
+			var ul = document.getElementById('list');
+			var lis = ul.children;
+			var A = ul.firstElementChild;
+			var B = ul.lastElementChild;
+			for(var i=0;i<lis.length;i++){
+				lis[i].onmouseover = function(){
+					set();//鼠标移入清空样式
+				//判断，当当前指向的是ul下的第一个或最后一个子节点的时候
+					if(this == A || this == B){
+						this.className = 'active';//橙色
+						//当上一个是第一个子节点的时候
+					}else if(this.previousElementSibling == A){
+						//对应位置写实参，位置要对应好
+						public(this,'none','show','site');	
+					//当下一个是最后一个子节点的时候
+					}else if(this.nextElementSibling == B){
+						public(this,'site','show','none');	
+					}else{
+					//都不是
+						public(this,'site','show','site');	
+					}
+				}
+				lis[i].onmouseout = function(){
+					set();//鼠标移出清空样式
+				}
+			}
+			//用传参把公用样式封装
+			function public(aa,bb,cc,dd){//形参
+			//把相应位置的用形参替换掉
+				aa.previousElementSibling.className = bb;
+				aa.className = cc;
+				aa.nextElementSibling.className = dd;
+			}
+			
+			//把清空样式部分用函数封装起来，
+			function set(){
+				for(var i=0;i<lis.length;i++){
+					lis[i].className = '';
+					ul.firstElementChild.className = 'none';
+					ul.lastElementChild.className = 'none';
+				}
+			}
+		</script>
+	</body>
+</html>
+						

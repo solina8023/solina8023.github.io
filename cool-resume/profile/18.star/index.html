@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			a{
+				text-decoration: none;
+				font-size: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<a href="javascript:;">★</a>
+		<a href="javascript:;">★</a>
+		<a href="javascript:;">★</a>
+		<a href="javascript:;">★</a>
+		<a href="javascript:;">★</a>-->
+		<script>
+			var as = document.getElementsByTagName('a');
+			var str = '';
+			for(i=0;i<5;i++){
+				str += '<a href="javascript:;">★</a>';
+			}
+			document.body.innerHTML = str;
+			for(var i=0;i<as.length;i++){
+				as[i].index = i;
+				var num;
+				as[i].onmouseover = function(){
+					for(var i=0;i<as.length;i++){
+						as[i].style.color = '';
+					}
+					if(this.index<2){
+						for(var i=0;i<=this.index;i++){
+							as[i].style.color = 'red';
+						}
+					}else{
+						for(var i=0;i<=this.index;i++){
+						    as[i].style.color = 'yellow';
+						}
+					}
+					
+				};
+				as[i].onmouseout = function(){
+					for(var i=0;i<as.length;i++){
+						 as[i].style.color = '';
+					}
+					if(num != null){
+						if(num<2){
+							for(var i=0;i<=num;i++){
+								as[i].style.color = 'red';
+							}
+						}else{
+							for(var i=0;i<=num;i++){
+							   as[i].style.color = 'yellow';
+							}
+						}	
+					}
+				};
+				as[i].onclick = function(){
+					num = this.index;	
+				};
+			}
+		</script>
+	</body>
+</html>
+

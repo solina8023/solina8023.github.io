@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="text">
+	<input type="button" value="验证" id="btn">
+	<script type="text/javascript">
+	var btn = document.getElementById('btn');
+	var text = document.getElementById('text');
+	btn.onclick = function(){
+		if(!text.value){
+			alert('请输入内容');
+			return;
+		}
+		//jsonly@foxmail.com
+		///^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+		
+		///^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/
+
+		var re = /^(\w+)@(\w+)\.(com|cn|com\.cn|net)$/;
+		text.value.replace(re,function(){
+			console.log(arguments)
+		})
+		if(re.test(text.value)){
+			alert('邮箱验证成功');
+		}else{
+			alert('邮箱验证失败');
+		}
+	};
+	</script>
+</body>
+</html>

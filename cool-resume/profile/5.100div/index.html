@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 50px;
+				height: 50px;
+				background: red;
+				position: absolute;
+				font-size:20px;
+				line-height: 50px;
+				color: #fff;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			var num =-1;
+			var str = '';
+			var arr = ['red','orange','yellow','blue','lightblue','green','purple'];
+			for(var i=0;i<100;i++){
+				if(i%10==0){
+					num++
+				}
+				str += '<div style="left:'+i%10*60+'px;top:'+num*60+'px;background:'+arr[i%arr.length]+';">'+i+'</div>'
+			}//i%10取模求余。left的值本来是i*60；，但是因为要每10个就要折行，
+			//所以是i%10;if的条件是i%10==0，也就是说当余数是0的时候，就会折行；
+			document.body.innerHTML= str;
+		</script>
+	</body>
+</html>

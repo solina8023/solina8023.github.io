@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="mQuery.js"></script>
+		<style>
+			body{
+				background-color: #F1F1F1;
+			}
+			ul{
+				margin:0 auto;
+				padding: 0;
+				width: 1208px;
+			}
+			li{
+				list-style: none;
+				float: left;
+				padding: 10px;
+				margin: 0 1px;
+				background-color: white;
+			}
+			p{
+				margin: 0;
+				text-align: center;
+				background-color: #F1F1F1;
+				line-height: 40px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			img{
+				vertical-align: top;
+			}
+			div{
+				margin:0 auto;
+				width: 210px;
+			}
+			div:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			a{
+				text-decoration: none;
+				width: 100px;
+				line-height: 40px;
+				display: block;
+				color: white;
+				background-color: #009999;
+				text-align: center;
+				float: left;
+			}
+			a:nth-child(1){
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="javascript:;">从小到大</a>
+			<a href="javascript:;">打乱顺序</a>
+		</div>
+		<ul>
+			<li>
+				<img src="img/1.jpg" alt="">
+				<p>1-温馨办公</p>
+			</li>
+			<li>
+				<img src="img/2.jpg" alt="">
+				<p>2-游戏桌面</p>
+			</li>
+			<li>
+				<img src="img/3.jpg" alt="">
+				<p>3-汽车摇滚</p>
+			</li>
+			<li>
+				<img src="img/4.jpg" alt="">
+				<p>4-狭路相逢</p>
+			</li>
+			<li>
+				<img src="img/5.jpg" alt="">
+				<p>5-棒球小子</p>
+			</li>
+			<li>
+				<img src="img/6.jpg" alt="">
+				<p>6-球鞋动力</p>
+			</li>
+			<li>
+				<img src="img/7.jpg" alt="">
+				<p>7-游戏官网</p>
+			</li>
+			<li>
+				<img src="img/8.jpg" alt="">
+				<p>8-指尖社区</p>
+			</li>
+		</ul>
+		<script>
+			var as = $('a','div');
+			var ul = $('ul')[0];
+			var lis = $('li');
+			
+			
+			//设置一个开关
+			var onOff = true;
+			/*建立两个数组，点击大小按钮的时候，使用的是数组1里面的内容
+			 点击乱序的时候，调用的就是数组2里面的内容，这样就不会出现打
+			 乱顺序再点击大小的时候顺序错乱的问题；
+			 */
+			var arr1 = Array.from(lis);
+			//concat()括号里不写东西的时候，代表复制；写东西代表拼接；
+			var arr2 = arr1.concat();
+			//点击大小a标签的时候
+			//需要建立一个索引让点击第一次的时候不发生改变
+			as[0].index = 0;
+			as[0].onclick = function(){
+				as[0].index++;
+					//数组翻转
+					arr1.reverse();
+				if(!onOff){
+					this.innerHTML = '从小到大';
+				}else{
+					this.innerHTML = '从大到小';
+				}
+				onOff = !onOff;
+				fn(arr1);
+			}
+			//封装一个ul内容的函数，方便调用；
+			function fn(lis){
+				//先设置一个空的字符串，让它等于ul的内容
+				//后面调用的时候，就不用再清空ul的内容了，因为str它本身就是空的；
+				var str = '';
+				//给数组里的每个li加上内容
+				for(var i=0;i<lis.length;i++){
+					str += '<li>'+lis[i].innerHTML+'</li>';
+					ul.innerHTML = str;
+				}
+			}
+			
+			//点击随机的时候
+			as[1].onclick = function(){
+				arr2.sort(function(){
+					return Math.random()-0.5;
+				})
+				fn(arr2);
+			}
+		</script>
+	</body>
+</html>

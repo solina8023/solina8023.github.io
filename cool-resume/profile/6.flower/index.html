@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			for(var i=100;i<1000;i++){
+				//百位数以153为例，百位的数字是153/100取整数得到的；也就是153/100得1.53取整数1
+				var b = Math.floor(i/100);
+				//十位数是153/10得到15.3取整数15，想要得到5，让它模10.得到余数5
+				var s = Math.floor(i/10)%10;
+				//个位153%10得到15.3取余数3
+				var g = i%10;
+				if(b*b*b+s*s*s+g*g*g==i){
+					console.log(i)
+				}
+			}
+//			百位:i/100;
+//			十位:i/10
+//			个位:i/1
+		</script>
+	</body>
+</html>

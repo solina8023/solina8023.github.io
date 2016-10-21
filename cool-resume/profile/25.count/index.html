@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background: #CC9A9A;
+			font-size: 50px;
+			text-align: center;
+			padding: 200px 200px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var date = new Date(2016,10,11,0,0,0);
+
+		// date.setDate(6);
+
+		var time = date.getTime();
+
+		
+		setInterval(function(){
+			var now = +new Date();
+			var s = Math.round((time-now)/1000);
+			var d = Math.floor(s/60/60/24);
+			var h = Math.floor(s%(60*60*24)/60/60);
+			var m = Math.floor(s%(60*60)/60);
+			var se = s%60;
+			//console.log(d,h,m,se);
+			document.body.innerHTML = '距2016年11月11日剩余：</br>'+d+'天'+h+'时'+m+'分'+se+'秒';
+		}, 1000)
+		
+
+
+		//var str = '1';
+
+		//console.log(typeof(+str));
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="text" value="">
+	<div id="div">请输入内容</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="text" placeholder="请输入内容">
+	<script>
+		var text = document.getElementById('text');
+		var div = document.getElementById('div');
+		//var btn = document.getElementById('btn')
+		//var input = document.getElementsByTagName('input')[2];
+		text.onkeydown = function(){
+			console.log(text.value)
+			//定时器在这里解决的是点击键盘的时候自身的延迟问题，这个问题没办法解决，不加定时器的话点击键盘按下第一次的时候判断条件因为延迟问题会先执行即显示状态，第二次的时候才会消失；
+			setTimeout(function(){
+				console.log(text.value)
+				if(text.value == ''){
+					div.style.display = 'block';
+				}else{
+					div.style.display = 'none';
+				}
+			})	
+		}
+		div.onmousedown = function(){
+			text.focus();
+			return false;
+		}
+
+	</script>
+</body>
+</html>

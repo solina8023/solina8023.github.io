@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				-background: red;
+				position: absolute;
+				z-index: 10;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				border: 5px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<script>
+			var div1 = document.getElementById('div1');
+			var div2 = document.getElementById('div2');
+			div1.onmousedown = function(ev){
+			//获取到鼠标在div1里的具体位置
+				var disx = ev.clientX - this.offsetLeft;
+				var disy = ev.clientY - this.offsetTop;
+				div1.style.border = "5px dashed #000";
+				//鼠标移动时位置的变化；
+				document.onmousemove = function(ev){
+					var x = ev.clientX - disx;
+					var y = ev.clientY - disy;
+					div1.style.left = x + 'px';
+					div1.style.top = y + 'px';
+					//div1的边框加上
+					//div1.style.border = "2px dashed #000";
+				}
+				document.onmouseup = function(ev){
+					document.onmousemove = null;
+					//鼠标抬起的时候,把div1的值赋给div2，边框取消；
+					div2.style.left = div1.style.left;
+					div2.style.top = div1.style.top;
+					div1.style.border = '';
+				}
+			}
+		</script>
+	</body>
+</html>

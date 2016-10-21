@@ -1,0 +1,1366 @@
+/*topbar*/
+.box{
+	width: 100%;
+	height: 30px;
+	background-color: #f3f3f3;
+}
+.box .topbar{
+	height: 30px;
+	width: 1200px;
+	margin: 0 auto;
+	line-height: 30px;
+}
+.topbar a{
+	color: #5e5e5e;
+}
+.box .topbar li{
+	float: left;
+}
+.topbar .topbar-left li{
+	padding-right: 14px;
+}
+.topbar .topbar-right li{
+	padding-right: 19px;
+}
+.topbar-left .phone,.topbar-right .mine,.topbar-right .service,.topbar-right .compony,.topbar-right .busniss{
+	position: relative;
+}
+.topbar-right .service,.topbar-right .compony{
+	margin-right: 10px;
+}
+.topbar .topbar-left .phone{
+	padding-left: 21px;
+}
+.topbar-left a:hover{
+	color: #e3101e;
+}
+.topbar-left .phone i{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	left: 0;
+	top: 7px;
+}
+.topbar-right .load{
+	padding-left: 2px;
+	padding-right: 4px;
+}
+.topbar-right .online{
+	color: #a5a5af;
+}
+.topbar-right span{
+	border-left: 1px solid #e6e6e6;
+	padding: 9px 9px 9px -10px;
+}
+.topbar-right .line span{
+	border-left: none;
+	color: #a5a5a5;
+	display:inline-block;
+	padding-top: -20px;
+}
+.topbar-right .guist span{
+	padding-left: 11px;
+}
+.topbar-right .order span{
+	padding-left: 9px;
+}
+.topbar .topbar-right .mine{
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+}
+.topbar-right .mine i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -20px;
+	top: 15px;
+	left:53px;
+	overflow: hidden;
+}
+.topbar-right .service i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -20px;
+	top: 15px;
+	left:53px;
+	overflow: hidden;
+}
+.topbar-right .compony i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -20px;
+	top: 15px;
+	left:53px;
+	overflow: hidden;
+}
+.topbar-right .busniss i{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -25px;
+	top: 8px;
+	left:50px;
+}
+.topbar-right .busniss a{
+	color: #0066cc;
+}
+/*topbar over*/
+/*header*/
+body img:hover{
+	width: 100%;
+	height: 100%;
+	opacity: .83;
+}
+body a:hover{
+	color: #CC002F;
+}
+header{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 15px;
+	height: 121px;
+}
+h1{
+	width: 200px;
+	height: 43px;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -40px;
+	text-indent: -2000px;
+}
+.headtop .headtop-left{
+	position: relative
+}
+.headtop .headtop-left a{
+	display: block;
+	width: 100px;
+	height: 59px;
+	background: url(../img/top1.gif) no-repeat;
+	position: absolute;
+	left: 210px;
+	top: 0;
+}
+.headtop-center-up form{
+	width: 500px;
+	height: 34px;
+	padding-left: 196px;
+}
+.headtop-center-up #phone{
+	width: 406px;
+	border: 2px solid #e3101e;
+	height: 30px;
+	text-indent: 10px;
+}
+.headtop-center-up #service{
+	width: 90px;
+	height: 34px;
+	border: none;
+	background-color: #e3101e;
+	font-size: 16px;
+	color: #fff;
+}
+.headtop-center-down{
+	margin-left: 198px;
+	padding-top: 8px;
+}
+.headtop-center-down a{
+	color: #b1b1a5;
+}
+.headtop .headtop-center-down a:hover{
+	color: #e3101e; 
+}
+.headtop-right{
+	width: 119px;
+	height: 55px;
+	position: relative;
+	padding-right: 12px;
+}
+.headtop-right .shopping i{
+	display: block;
+	width: 32px;
+	height: 33px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -85px;
+	left: 0;
+	top: 0;
+}
+.headtop-right .shopping{
+	padding-left: 35px;
+	padding-top: 20px;
+	display: block;
+	color: #5e5e5e;
+}
+.headtop-right .down i{
+	display: block;
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -120px;
+	left: 112px;
+	top: 24px;
+	overflow: hidden;
+}
+.headbot{
+	margin-top: 24px;
+	position: relative;
+}
+.headbot .headbot-left{
+	width: 200px;
+	height: 491px;
+	background-color: #303a47;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.headbot .headbot-left li{
+	height: 30px;
+	line-height: 30px;
+}
+.headbot .headbot-left li:hover{
+	background-color: #E0E0E0;
+}
+.headbot .headbot-left a{
+	padding-left: 14px;
+	color: #fff;
+}
+.headbot .headbot-left a:hover{
+	padding-left: 14px;
+	color: red;
+}
+.headbot .headbot-left .headbot-left-top{
+	width: 200px;
+	height: 41px;
+	line-height: 41px;
+	background-color: #474747;
+}
+.headbot .headbot-left-top a{
+	font-size: 16px;
+	color: #fff;
+}
+#computer{
+	border-bottom: 1px solid #3e4854;
+	height: 29px;
+	line-height: 30px;
+	width: 170px;
+	margin-left: 14px;
+}
+#computer a{
+	margin-left: -14px;
+}
+.headbot .headbot-center{
+	word-spacing: 30px;
+	padding-left: 215px;
+	height: 41px;
+	line-height: 41px;
+}
+.headbot .headbot-center a{
+	color: #000;
+}
+.headbot .headbot-center a:hover{
+	color: #e3101e;
+}
+.headbot-right{
+	padding-right: 21px;
+	position: relative;
+}
+.headbot-right i{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -120px;
+	left: 134px;
+	top: 5px;
+}
+.headbot-right b{
+	width: 7px;
+	height: 4px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: -10px -120px;
+	left: 134px;
+	top: 17px;
+}
+.high{
+	height: 450px;
+	background-color: #1977ff;
+}
+.high .big{
+	width: 1200px;
+	height: 450px;
+	margin: 0 auto;
+	position: relative;
+}
+.big .big-bot{
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	left: 200px;
+	bottom: 0;
+}
+.big .picture{
+	width: 750px;
+	height: 420px;
+	margin-left: 200px;
+	background: url(../img/big.jpg);
+	overflow: hidden;
+}
+.big .picture ul{
+	width: 500%;
+	animation: 30s move linear infinite; 
+}
+.big .picture li{
+	width: 750px;
+	height: 420px;
+	float: left;
+}
+.big .picture li:nth-of-type(1){
+	background: url(../img/big1.jpg);
+}
+.big .picture li:nth-of-type(2){
+	background: url(../img/big2.jpg);
+}
+.big .picture li:nth-of-type(3){
+	background: url(../img/big3.jpg);
+}
+.big .picture li:nth-of-type(4){
+	background: url(../img/big4.jpg);
+}
+.big .picture li:nth-of-type(5){
+	background: url(../img/big5.jpg);
+}
+@keyframes move{
+	0%{
+		transform: translate(0);
+	}
+	20%{
+		transform: translateX(-750px);
+	}
+	40%{
+		transform: translateX(-1500px);
+	}
+	60%{
+		transform: translateX(-2250px);
+	}
+	80%{
+		transform: translateX(-3000px);
+	}
+	100%{
+		transform: translateX(-3750px);
+	}
+}
+.big .picture li:hover{
+	animation-play-state: paused;
+}
+.big .big-bot li{
+	width: 93px;
+	height: 30px;
+	border-right: 1px solid #1d78fc;
+	text-align: center;
+}
+.big .big-bot li:hover{
+	background: url(../img/s.jpg) no-repeat;
+	font-size: 0;
+}
+.big .big-bot a{
+	color: #fff;
+}
+.big .pic-right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 448px;
+	border-top: 1px solid #cecece;
+	border-bottom: 1px solid #cecece;
+	background-color: #fff;
+}
+.big .pic-right .pic-right-top a{
+	margin-left: 20px;
+    margin-right: 20px;
+}
+.pic-right-top .title{
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+}
+.pic-right b{
+	font-size: 14px;
+	color: #666;
+}
+.pic-right .alive b{
+	margin-left: 20px;
+}
+ .pic-right-top .title .more{
+	font-size: 12px;
+	color: #999;
+}
+.pic-right-top .title i{
+	width: 5px;
+	height: 7px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -125px;
+	right: 10px;
+	top: 16px;
+}
+.pic-right-top .recommend li{
+	height: 24px;
+	line-height: 24px;	
+}
+.pic-right-top .recommend a{
+	color: #999;
+}
+.pic-right-top .recommend span{
+	color: #666;
+}
+.pic-right-top .recommend span:hover{
+	color: #e3101e;
+}
+.pic-right-bot .travel a:hover{
+	color: red;
+}
+.pic-right-bot .alive{
+	margin-top: 11px;
+	height: 31px;
+	line-height: 31px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.pic-right-bot .travel{
+	padding-left: 21px;
+}
+.pic-right-bot .travel li{
+	width: 52px;
+	height: 97px;
+	float: left;
+}
+.travel .iphone,.travel .car,.travel .find,.travel .fly{
+	border-bottom: 1px solid #f3f3f3;
+}
+.pic-right-bot .travel a{
+	display: inline-block;
+	padding-top: 60px;
+	width: 52px;
+	text-align: center;
+}
+.travel .iphone i{
+	width: 20px;
+	height: 25px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -135px;
+	right: 193px;
+	top: 270px;
+}
+.travel .iphone b{
+	width: 6px;
+	height: 3px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -245px;
+	right: 200px;
+	top: 330px;
+}
+.travel .car i{
+	width: 29px;
+	height: 23px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -160px;
+	right: 134px;
+	top: 270px;
+}
+.travel .car b{
+	width: 6px;
+	height: 3px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -245px;
+	right: 148px;
+	top: 330px;
+}
+.travel .find i{
+	width: 26px;
+	height: 28px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -185px;
+	right: 82px;
+	top: 270px;
+}
+.travel .find b{
+	width: 6px;
+	height: 3px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -245px;
+	right: 94px;
+	top: 330px;
+}
+.travel .fly i{
+	width: 29px;
+	height: 29px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -215px;
+	right: 30px;
+	top: 270px;
+}
+.travel .fly b{
+	width: 6px;
+	height: 3px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -245px;
+	right: 42px;
+	top: 330px;
+}
+.travel .beauty i{
+	width: 30px;
+	height: 27px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -330px;
+	right: 190px;
+	top: 370px;
+}
+.travel .doller i{
+	width: 30px;
+	height: 27px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -250px;
+	right: 136px;
+	top: 370px;
+}
+.travel .ticket i{
+	width: 30px;
+	height: 27px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -280px;
+	right: 84px;
+	top: 370px;
+}
+.travel .game i{
+	width: 29px;
+	height: 20px;
+	position: absolute;
+	background: url(../img/spirit.jpg) no-repeat;
+	background-position: 0 -310px;
+	right: 30px;
+	top: 374px;
+}
+.move{
+	width: 1200px;
+	margin: 0 auto;
+}
+.move h4{
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #666;
+}
+.move .move-left{
+	width: 200px;
+	height: 560px;
+}
+.move .move-right{
+	width: 1000px;
+	height: 560px;
+}
+.move .move-right .today{
+	width: 249px;
+	height: 279px;
+	border-top: 1px solid #e5e5e5;
+	border-right: 1px solid #f4f4f4;
+}
+.move .move-right .mobile{
+	width: 249px;
+	height: 279px;
+	border-top: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+}
+.move .move-right .rose{
+	width: 249px;
+	height: 278px;
+	border-top: 1px solid #f4f4f4;
+	border-right: 1px solid #f4f4f4;
+	border-bottom: 1px solid #e5e5e5;
+}
+.move .move-right .beer{
+	width: 249px;
+	height: 278px;
+	border-top: 1px solid #f3f3f3;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e5e5e5;
+}
+.like{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 11px;
+}
+.exchange{
+	height:33px;
+	line-height: 33px;
+	font-size: 14px;
+}
+.exchange h4,.exchange a{
+	color: #666666
+}
+.exchange .one{
+	font-size: 12px;
+	color: #66667a;
+}
+.guss{
+	width: 1198px;
+	height: 188px;
+	border: 1px solid #ececec;
+}
+.guss p{
+	margin-left: 24px;
+	color: #666;
+}
+.guss span{
+	color: #f46c1e;
+}
+.F1,.F2,.F3,.F4,.F5,.F6,.F7{
+	width: 1200px;
+	margin: 0 auto;	
+}
+.F1-top{
+	margin-top: 30px;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 2px solid #535353;
+}
+.F1-top h3{
+	width: 210px;
+	font-size: 18px;
+	color: #333;
+}
+.F1-top-right a{
+	display: inline-block;
+	height: 34px;
+	margin-right: 30px;
+	color: #333;
+}
+.F1-top-right a:hover{
+	height: 34px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: #535353;
+	color: #fff;
+}
+.F1-mid{
+	width: 1199px;
+	height: 478px;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.F1-mid-left{
+	height: 478px;
+	border-right: 1px solid #eee;
+}
+.mid-left-top{
+	width: 209px;
+	height: 260px;
+}
+.mid-left-mid{
+	width: 209px;
+	height: 60px;
+	background-color: #dae9f0;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F2-top-right a:hover{
+	height: 34px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: #535353;
+	color: #fff;
+}
+.F2 .mid-left-mid{
+	width: 209px;
+	height: 60px;
+	background-color: #e4e7fa;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F3-top-right a:hover{
+	height: 34px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: #535353;
+	color: #fff;
+}
+.F3 .mid-left-mid{
+	width: 209px;
+	height: 30px;
+	background-color: #e0eed5;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F4-top-right a:hover{
+	height: 34px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: #535353;
+	color: #fff;
+}
+.F4 .mid-left-mid{
+	width: 209px;
+	height: 60px;
+	background-color: #f8eee2;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F5 .mid-left-mid{
+	width: 209px;
+	height: 90px;
+	background-color: #f5dee4;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F6 .mid-left-mid{
+	width: 209px;
+	height: 60px;
+	background-color: #e5f4fb;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.F7 .mid-left-mid{
+	width: 209px;
+	height: 30px;
+	background-color: #e6e6e6;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.mid-left-mid a{
+	display: inline-block;
+	margin: 9px 15px 9px 19px;
+	color: #333;
+}
+.mid-left-bot{
+	width: 209px;
+	height: 112px;
+	background-color: #ecf4f7;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F2 .mid-left-bot{
+	width: 209px;
+	height: 112px;
+	background-color: #f5f5ff;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F3 .mid-left-bot{
+	width: 209px;
+	height: 142px;
+	background-color: #f4fced;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F4 .mid-left-bot{
+	width: 209px;
+	height: 112px;
+	background-color: #fcfbf7;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F5 .mid-left-bot{
+	width: 209px;
+	height: 82px;
+	background-color: #f9eef2;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F6 .mid-left-bot{
+	width: 209px;
+	height: 112px;
+	background-color: #f4fcfe;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.F7 .mid-left-bot{
+	width: 209px;
+	height: 142px;
+	background-color: #f4f4f4;
+	padding-top: 9px;
+	padding-bottom: 17px;
+}
+.mid-left-bot a{
+	display: inline-block;
+	width: 66px;
+	margin: 8px 10px 8px 19px;
+	color: #999;
+}
+.F1-center-mid{
+	width: 569px;
+	height: 478px;
+	border-right: 1px solid #eee;
+}
+.bigger{
+	width: 569px;
+	height: 259px;
+	border-bottom: 1px solid #eee;
+}
+.big-bot li{
+	width: 189px;
+	height: 218px;
+	border-right: 1px solid #eee;
+}
+.big-bot .zu{
+	border-right: none;
+}
+.F1-center-right{
+	width: 419px;
+	height: 479px;
+}
+.F1-center-right .y1{
+	width: 208px;
+	height: 258px;
+	border-top: 1px solid #eeeef0;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.F1-center-right .y2{
+	width: 209px;
+	height: 259px;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.F1-center-right .y3{
+	width: 209px;
+	height: 218px;
+	border-right: 1px solid #eee;
+}
+.F1-mid-right .note{
+	width: 569px;	
+}
+.F1-mid-right .watch{
+	width: 420px;
+}
+.F1-mid-right .oppo{
+	width: 569px;
+	border-right: 1px solid #eeeef0;
+}
+.F1-mid-right .lenovo li{
+	width: 189px;
+	height: 218px;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.watch{
+	width: 420px;
+	height: 480px;
+	margin-top: -259px;
+}
+.watch li{
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.watch .hide{
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+.F1-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/L1.jpg) no-repeat;
+}
+.F2-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/2F/L.jpg) no-repeat;
+}
+.F3-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/3F/L.jpg) no-repeat;
+}
+.F4-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/4F/L.jpg) no-repeat;
+}
+.F5-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/5F/L.jpg) no-repeat;
+}
+.F6-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/6F/L.jpg) no-repeat;
+}
+.F7-bot{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../img/7F/L.jpg) no-repeat;
+}
+.F1-bot a,.F2-bot a,.F3-bot a,.F4-bot a,.F5-bot a,.F6-bot a,.F7-bot a{
+	float: left;
+	height: 60px;
+	width: 120px;
+}
+ .advertise{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.decorate{
+	width: 359px;
+	height: 478px;
+	position: relative;
+}
+.decorate img{
+	width: 359px;
+	height: 478px;
+}
+.decorate a{
+	width: 359px;
+	height: 478px;
+	display: block;
+}
+.float{
+	width: 359px;
+	height: 95px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.bg{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: .6;
+	width:100%;
+	height:100%;
+}
+.text{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	color:#fff;
+	text-align: center;
+}
+.float .sport{
+	display: block;
+	font-size: 22px;
+	text-align: center;
+	margin-top: 15px;
+}
+.float .nike{
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 9px;
+}
+.float .red{
+	display:block;
+	width: 108px;
+	height: 3px;
+	margin-top: 16px;
+	margin-left: 126px;
+	background: url(../img/cc.jpg) no-repeat;
+}
+.running{
+	width: 630px;
+	height: 478px;
+}
+.running li{
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee; 
+}
+.running .tach,.running .belt,.running .bag,{
+	border-bottom: none;
+}
+.F8{
+	width: 1200px;
+	margin: 0 auto;
+	height: 520px;
+}
+.F8 h3{
+	font-size: 20px;
+	margin-top: 17px;
+	height: 38px;
+	line-height: 38px;
+	color: #333;	
+}
+.F8-bot{
+	width: 1200px;
+	height: 480px;
+}
+.F8-left1{
+	width: 285px;
+	height: 480px;
+	position: relative;
+}
+.F8-left1 img{
+	width: 285px;
+	height: 480px;
+}
+.F8-left1 a{
+	width: 285px;
+	height: 480px;
+	display: block;
+}
+.F8-left1 span:hover{
+	text-decoration: underline;
+}
+.F8-left3 span:hover{
+	text-decoration: underline;
+}
+.money{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom: 0;	
+}
+.F8-left1 .money .bg1{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;	
+	background: #000;
+	opacity: .3;
+}
+.F8-left1 .money .text1{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom:0px;	
+	margin-left: 25px;
+	text-align: left;
+	color:#fff;
+}
+.text1 span{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+}
+.text1 .bao{
+	display: block;
+	width: 285px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+}
+.text1 .bai{
+	margin-top: 14px;
+}
+.F8-left2{
+	width: 210px;
+	height: 480px;
+}
+.F8-left3{
+	width: 285px;
+	height: 480px;
+	position: relative;
+}
+.F8-left3 img{
+	width: 285px;
+	height: 480px;
+}
+.F8-left3 a{
+	display: block;
+	width: 285px;
+	height: 480px;
+}
+.float2{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.float2 .bg2{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .4;
+}
+.float2 .text2{
+	width: 285px;
+	height: 135px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+}
+.text2 span{
+	display: inline-block;
+	margin-left: 24px;
+}
+.text2 .text21 span{
+	font-size: 16px;
+	height: 46px;
+	line-height: 46px;
+	margin-bottom: 13px;
+}
+.text2 .text22 span{
+	height: 28px;
+	line-height: 28px;
+}
+.F8-right{
+	width: 420px;
+	height: 480px;
+}
+.promotion{
+	width: 1200px;
+	margin: 0 auto;
+}
+.promotion .toto{
+	padding-top: 18px;
+	height: 36px;
+	line-height: 36px;
+	color: #333;
+}
+.toto h4{
+	font-size: 20px;
+}
+.toto-right{
+	width: 420px;
+}
+.toto-right a{
+	color: #666;
+}
+.toto-right span{
+	color: #999;
+	position: relative;
+	margin-right: 12px;
+}
+.toto-right span i{
+	width: 5px;
+	height: 7px;
+	position: absolute;
+	background: url(../img/spirit.jpg) 0 -125px;
+	right:-12px;
+	bottom: 2px;
+}
+.bask{
+	width: 1198px;
+	height: 214px;
+	border: 1px solid #e6e6e6;
+}
+.bask-left{
+	height: 214px;
+	width: 779px;
+	border-right: 1px solid #e6e6e6;
+}
+.bask-left p{
+	height: 16px;
+	line-height: 16px;
+	margin-left: 36px;
+	color: #333;
+}
+.bask-left span{
+	color: #e3101e;
+}
+.bask-right a{
+	display: /*inline-*/block;
+	margin: 15px 40px 0 39px;
+}
+.bask-right p{
+	width: 125px;
+	height: 35px;
+	background-color: #f8f8f8;
+	margin-left: 50px;
+	margin-top: -47px;
+}
+.bask-right dt{
+	margin-top: 10px;
+	margin-left: -21px;
+}
+.bask-right dd{
+	margin-left: 18px;
+}
+footer{
+	height: 555px;
+	margin-top: 20px;
+	border-top: 5px solid #e3101e;
+	background-color: #f8f8f8;
+}
+.fotbot{
+	width: 1170px;
+	margin: 0 auto;
+	padding-left: 30px;
+}
+.fotbot dl{
+	width: 166px;
+}
+.fotbot dt{
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	color: #333;
+}
+.fotbot dd{
+	height: 22px;
+	line-height: 22px;
+	color: #5e5e5e;
+}
+.guarantee{
+	width: 1050px;
+	height: 70px;
+	background-color: #efefef;
+	margin: 0 auto;
+	margin-top: 42px;
+	padding-left: 150px;
+}
+.guarantee a{
+	display: inline-block;
+	height: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 200px;
+	position: relative;
+	color: #5d5d5d;
+}
+.guarantee .exchange i{
+	width: 40px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg);
+	left: -48px;
+	top: 15px;;
+}
+.guarantee .major i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -40px 0;
+	left: -48px;
+	top: 15px;;
+}
+.guarantee .extend i{
+	width: 36px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -75px 0;
+	left: -48px;
+	top: 15px;;
+}
+.guarantee .recycle i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -115px 0;
+	left: -48px;
+	top: 15px;;
+}
+.guarantee .service i{
+	width: 35px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) -150px 0;
+	left: -48px;
+	top: 15px;;
+}
+.back{
+	padding-top: 9px;
+	width: 1040px;
+	margin: 0 auto;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 160px;
+}
+.back span{
+	border-right: 1px solid #ece8e8;
+	margin-left: 7px;
+	margin-right: 18px;
+}
+.back a{
+	color: #5e5e5e;
+}
+.fotnav{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+}
+.fotnav a{
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	color: #5e5e5e;
+	margin-right: 22px;
+	position: relative;
+}
+.fotnav .comban i{
+	width: 29px;
+	height: 18px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) 0 -40px;
+	left: -40px;
+	top: 7px;
+}
+.fotnav .navigation i{
+	width: 40px;
+	height: 39px;
+	position: absolute;
+	background: url(../img/footer/spirit.jpg) 0 -60px;
+	left: 14px;
+	top: 50px;
+}
+.footbot{
+	padding-top: 94px;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	color: #a5a5a5;
+}
+.footbot span{
+	margin-right: 15px;
+	display: inline-block;
+	position: relative;
+}
+.fotbot dd:hover{
+	color: red;
+}
+.foot{
+	width: 970px;
+	margin: 0 auto;
+	padding-top: 10px; 
+	padding-left: 230px;
+}
+.foot a{
+	width: 124px;
+	height: 35px;
+	margin-right: 24px;
+}
+	

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 500px;
+				height: 500px;
+				border: 2px solid #5A94EF;
+				position: relative;
+			}
+			div{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				background-color: red;
+			}/*一定不要忘了要写上定位*/
+		</style>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="but">
+		<section id="box"></section>
+		<!--section 里面要是写上div，div就会一直显示在左上角的位置，因为div是在
+		下面生成的，所以这里可以不用写-->
+		<script>
+			var but = document.getElementById('but');
+			var box = document.getElementById('box');
+			var len = 8;
+			var num=0;
+			but.onclick = function(){
+				num++;
+				var str = '';//点击下一次的时候清空上一次的样式；
+				if(num==1){
+					//就是top值和left值在不停的发生变化；
+					for(var i=0;i<len;i++){
+						if(i<len/2){
+							str += '<div style="left:'+i*60+'px;top:'+i*60+'px;">'+i+'</div>'
+						}else{
+							str +='<div style="left:'+(len-i-1)*60+'px;top:'+i*60+'px;">'+i+'</div>'
+						}
+					}
+					box.innerHTML = str;
+				}else if(num==2){
+					for(var i=0;i<len;i++){
+						if(i<len/2){
+							str += '<div style="left:'+i*60+'px;top:'+(len-i-1)*60+'px;">'+i+'</div>'
+						}else{
+							str += '<div style="left:'+i*60+'px;top:'+i*60+'px;">'+i+'</div>'
+						}
+					}
+					box.innerHTML = str;
+				}else if(num==3){
+					for(var i=0;i<len;i++){
+						if(i<len/2){
+							str += '<div style="left:'+(len-i-1)*60+'px;top:'+(len-i-1)*60+'px;">'+i+'</div>';
+						}else{
+							str += '<div style="left:'+i*60+'px;top:'+(len-i-1)*60+'px;">'+i+'</div>'
+						}
+					}
+					box.innerHTML = str;
+				}else if(num==4){
+					for(var i=0;i<len;i++){
+						if(i<len/2){
+							str += '<div style="left:'+(len-i-1)*60+'px;top:'+i*60+'px;">'+i+'</div>'
+						}else{
+							str += '<div style="left:'+(len-i-1)*60+'px;top:'+(len-i-1)*60+'px;">'+i+'</div>';
+						}
+					num=0	
+					}
+					box.innerHTML = str;
+				}
+			}
+		</script> 
+	</body>
+</html>

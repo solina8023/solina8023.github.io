@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			li{
+				list-style: none;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			<li>
+				<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>12.5元</em>
+				小计：<span>0元</span>
+			</li>
+			<li>
+				<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>15.5元</em>
+				小计：<span>0元</span>
+			</li>
+			<li>
+			<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>11元</em>
+				小计：<span>0元</span></li>
+			<li>
+				<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>10元</em>
+				小计：<span>0元</span>
+			</li>
+			<li>
+				<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>8.5元</em>
+				小计：<span>0元</span></li>
+			<li>
+				<input type="button" value="-">
+				<strong>0</strong>
+				<input type="button" value="+">
+				单价：<em>2.5元</em>
+				小计：<span>0元</span>
+			</li>
+		</ul>
+		<div>商品合计共：<i>0</i>件；共花费了:<i>0</i>元</div>
+		<div>其中最贵的商品单价是：<i>0</i>元</div>
+		<script>
+			var lis = document.getElementsByTagName('li');
+			var ps = document.getElementsByTagName('p');
+			var is = document.getElementsByTagName('i');
+			var em = document.getElementsByTagName('em');
+			var span = document.getElementsByTagName('span');
+			var strong = document.getElementsByTagName('strong');
+			for(var i=0;i<lis.length;i++){
+				fn(lis[i]);//得到的是实参；
+			}//fn(lis[i])里的i就是lis
+			function fn(lis){//需要用到一个形参和实参一一对应起来；
+				var buts = lis.getElementsByTagName('input');
+				var strongs = lis.getElementsByTagName('strong')[0];
+				var ems = lis.getElementsByTagName('em')[0];
+				var spans = lis.getElementsByTagName('span')[0];
+				var n1 = Number(strongs.innerHTML);//给需要用到的数字设置一个变量
+				var n2 = parseFloat(ems.innerHTML);//给单价也设置一个方便使用的数字
+				n1 = 0;
+				buts[1].onclick = function(){
+					n1++;
+					strongs.innerHTML = n1;
+					spans.innerHTML = n1*n2 + '元';
+					fb();
+				}
+				buts[0].onclick = function(){
+					n1--;
+					if(n1<0){
+						n1 = 0;
+					}
+					strongs.innerHTML = n1;
+					spans.innerHTML = n1*n2 + '元';	
+					fb();
+				}	
+			}
+			
+			
+			
+			function fb(){//函数不能重名；
+				var ss=0;
+				var ll=0;
+				var nn=0;
+				for(var i=0;i<strong.length;i++){
+					ss += Number(strong[i].innerHTML);
+					ll += parseFloat(span[i].innerHTML);
+					if(strong[i].innerHTML !=0 && parseFloat(em[i].innerHTML)>nn){
+						nn = parseFloat(em[i].innerHTML);//注意小括号的一一对应；
+					}
+				}
+				is[0].innerHTML = ss;
+				is[1].innerHTML = ll;
+				is[2].innerHTML = nn;
+			}
+		</script>
+	</body>
+</html>

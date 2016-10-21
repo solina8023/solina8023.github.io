@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			li{
+				list-style: none;
+				width: 100px;
+				height: 120px;
+				margin-right: 20px;
+				float: left;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			.active{
+				background: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="新建文件夹" id="btn" />
+		<input type="button" value="删除文件夹" id="clear"/>
+		<ul id="list"></ul>
+		<script>
+			var btn = document.getElementById('btn');
+			var list = document.getElementById('list');
+			var clear = document.getElementById('clear');
+			//点击创建li
+			btn.onclick = function(){
+				//创建元素
+				var li = document.createElement('li');
+				var input = document.createElement('input');
+				var img = document.createElement('img');
+				//把元素添加到相应的标签里；
+				li.appendChild(input);
+				li.appendChild(img);
+				//设置
+				img.src = 'img/1.jpg';
+				input.type = "checkbox";
+				input.style.display = "none";
+				//添加
+				list.appendChild(li);
+				
+				//鼠标移入的时候：
+				li.onmouseover = function(){
+					if(li.className == ''){
+						input.style.display = "block";
+						li.style.background = '#ccc';
+					}
+				}
+				li.onmouseout = function(){
+					if(li.className != ''){
+						input.style.display = "none";
+						li.style.background = '';
+					}
+				}
+				
+//				//开始判断：
+				var onOff = true;
+				li.onclick = function(){
+					if(onOff){
+						input.style.display = "block";
+						input.checked = true;
+						li.className = 'active';
+						onOff = false;
+					}else{
+						input.style.display = "none";
+						li.className = '';
+						onOff = true;
+					}
+				}
+				
+				
+				//删除文件夹
+				var inputC = list.getElementsByTagName('input');
+				var liC = list.children;
+				clear.onclick = function(){
+					for(var i=0;i<inputC.length;i++){
+						if(inputC[i].checked){
+							list.removeChild(liC[i]);
+							i--;
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

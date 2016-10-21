@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box{
+			width: 800px;
+			height: 500px;
+			padding: 20px;
+			background: #efefef;
+			position: relative;
+		}
+		#bg{
+			display: none;
+			width: 100%;
+			height: 100%;
+			position:absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.3);
+		}
+		#word{
+			font: 22px/22px "微软雅黑";
+		}
+		#word #set{
+			font: 12px/12px "宋体";
+			padding: 12px 20px;
+			color: #fff;
+			background: red;
+		}
+		#divbox{
+			width: 100px;
+			height: 100px;
+			background: #fff;
+			border: 4px solid #000;
+			position: absolute;
+			top: 70px;
+			left: 25px;
+		}
+		#list{
+			display: none;
+			position: absolute;
+			top: 147px;
+			right: 25px;
+			z-index: 100;
+			width: 260px;
+			height: 180px;
+			padding: 20px 0 0 40px;
+			background: #fff;
+			border: 20px solid #9c949c;
+			font: 16px/40px "微软雅黑";
+		}
+		span{
+			cursor: pointer;
+		}
+		#list #color span{
+			font: 12px/12px "微软雅黑";
+			color: #fff;
+			padding: 8px 10px;
+			border: 1px solid transparent;
+		}
+		#list #red{
+			background: #9cce00;
+		}
+		#list #yellow{
+			background: #efbd00;
+		}
+		#list #blue{
+			background: #5a94ef;
+		}
+		#list #red:hover{
+			background: red;
+			border: 1px solid #000;
+		}
+		#list #yellow:hover{
+			background: yellow;
+			border: 1px solid #000;
+		}	
+		#list #blue:hover{
+			background: blue;
+			border: 1px solid #000;
+		}	
+		#list #width span,#list #height span{
+			font: 12px/12px arial;
+			padding: 8px;
+			border: 1px solid #c0c0c0;
+			background: #efefef;
+			color: #848c8c;
+		}
+		#list #width span:hover,#list #height span:hover{
+			background: #ef9400;
+			border: 1px solid #000;
+			color: #000000;
+		}
+		#choose{
+			text-align: center;
+			margin-top: 10px;
+		}
+		#choose span{
+			font: 16px/16px "宋体";
+			color: #fff;
+			background: #002952;
+			padding: 8px 18px;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<div id="word">
+				请为下面的DIV设置样式：
+				<span id="set">点击设置</span>
+			</div>
+			<div id="divbox"></div>
+			<div id="list">
+					<div id="color">
+						请选择背景颜色：
+						<span id="red">红</span>
+						<span id="yellow">黄</span>
+						<span id="blue">蓝</span>
+					</div>
+					<div id="width">
+						请选宽度(px)：
+						<span id="w1">200</span>
+						<span id="w2">300</span>
+						<span id="w3">400</span>
+					</div>
+					<div id="height">
+						请选高度(px)：
+						<span id="hei1">200</span>
+						<span id="hei2">300</span>
+						<span id="hei3">400</span>
+					</div>
+					<div id="choose">
+						<span id="reset">恢复</span>
+						<span id="enter">确定</span>
+					</div>
+				</div>
+			<div id="bg"></div>
+		</div>
+		<script>
+			var bg = document.getElementById('bg');
+			var list = document.getElementById('list');
+			var set = document.getElementById('set');
+			var divbox = document.getElementById('divbox');
+			var red = document.getElementById('red');
+			var yellow = document.getElementById('yellow');
+			var blue = document.getElementById('blue');
+			var w1 = document.getElementById('w1');
+			var w2 = document.getElementById('w2');
+			var w3 = document.getElementById('w3');
+			var hei1 = document.getElementById('hei1');
+			var hei2 = document.getElementById('hei2');
+			var hei3 = document.getElementById('hei3');
+			var enter = document.getElementById('enter');
+			var reset = document.getElementById('reset');
+			//设置按钮点击的时候显示透明层和设置选项层
+			set.onclick = function(){
+				bg.style.display = 'block';
+				list.style.display = 'block';
+			};
+			//点击颜色按钮设置divbox的背景颜色。
+
+			red.onclick = function(){
+				divbox.style.backgroundColor = 'red';
+			};
+			yellow.onclick = function(){
+				divbox.style.backgroundColor = 'yellow';
+			};
+			blue.onclick = function(){
+				divbox.style.backgroundColor = 'blue';
+			};
+			//点击设置宽度按钮设置divbox的宽度
+			w1.onclick = function(){
+				divbox.style.width = '200px';
+			};
+			w2.onclick = function(){
+				divbox.style.width = '300px';
+			};
+			w3.onclick = function(){
+				divbox.style.width = '400px';
+			};
+			//点击设置高度按钮设置divbox的高度
+			hei1.onclick = function(){
+				divbox.style.height = '200px';
+			};
+			hei2.onclick = function(){
+				divbox.style.height = '300px';
+			};
+			hei3.onclick = function(){
+				divbox.style.height = '400px';
+			};
+			//点击确定按钮隐藏透明层和设置层
+			enter.onclick = function(){
+				bg.style.display = '';
+				list.style.display = '';
+			};
+			//点击恢复按钮默认divbox的样式。
+			reset.onclick = function(){
+				//divbox.style.width = '100px';
+				/*
+					cssText就是标签上的style属性。
+					cssText = '';相当于style = '';
+					注意在使用cssText进行样式设置的时候会清除原本的行间样式。
+				*/
+				divbox.style.cssText = '';
+			};
+		</script>
+	</body>
+</html>

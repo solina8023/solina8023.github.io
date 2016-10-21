@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: #EBCCCC;
+			}
+			div{
+				padding: 200px 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>speech after long silence: it is right, all other lovers being estranged or dead,unfriendly lamplight hid under its shade,the curtains drawn upon unfriendly night, that we descant and yet again descant, upon the supreme theme of Art and Song : bodily decrepitude is wisdom: young we loved each other and were ignorant. 
+		</div>
+		<script>
+			var div = document.getElementsByTagName('div')[0];
+			var str = div.innerHTML;
+			//以空格为分隔符进行分隔；
+			var arr = Array.from(str.split(' '));
+			//console.log(arr)
+			var dada = '';
+			//console.log(arr)
+			var qq = '';
+			for(var i=0;i<arr.length;i++){
+				dada += arr[i].charAt().toUpperCase();
+				qq += dada[i] + arr[i].substring(1)+' ';
+			}
+			div.innerHTML = qq;
+		</script>
+	</body>
+</html>

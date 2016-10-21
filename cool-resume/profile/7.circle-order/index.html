@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#boxtop{
+				width: 600px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			#order{
+				display: none;
+			}
+			#boxbot{
+				width: 600px;
+				height: 400px;
+				border: 10px solid #D3D3D3;
+				position: relative;
+				margin: 0 auto;
+			}
+			#img{
+				width: 100%;
+				height: 100%;
+			}
+			#span1{
+				width: 600px;
+				height: 30px;
+				background: #000;
+				opacity: .4;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+				color: #fff;
+			}
+			#text{
+				margin: 0;
+				width: 600px;
+				height: 30px;
+				background: #000;
+				opacity: .4;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				font-size: 20px;
+				color: #fff;
+				line-height: 30px;
+				text-align: center;
+			}
+			#boxbot a{
+				text-decoration: none;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				border: 5px solid blue;
+				border-radius: 50%;
+				font-size: 30px;
+				color: yellow;
+				position: absolute;
+				opacity: .4;
+				top: 50%;
+				margin-top: -25px;
+				text-align: center;
+				font-weight: bold;
+			}
+			#boxbot a:hover{
+				background: pink;
+				opacity: 1;
+			}
+			#next{
+				right: 10px;
+			}
+			#prev{
+				left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="boxtop">
+				<form>
+					<input type="button" id="button1" value="循环播放">
+					<input type="button" id="button2" value="顺序播放">
+				</form>
+				<p id="p1">图片可从最后一张循环到第一张切换</p>
+			</div>
+			<div id="boxbot">
+				<img src="imgs/1.jpg" id="img">
+				<a href="javascript:;" id="next">></a>
+				<a href="javascript:;" id="prev"><</a>
+				<p id="text">图片正在加载中。。。</p>
+				<span id="span1">数字正在计算中。。。</span>
+			</div>
+		</div>
+		<script>
+			var img = document.getElementById('img');
+			var next = document.getElementById('next');
+			var prev = document.getElementById('prev');
+			var span1 = document.getElementById('span1');
+			var button1 = document.getElementById('button1');
+			var button2 = document.getElementById('button2');
+			var text = document.getElementById('text');
+			var p1 = document.getElementById('p1');
+			var arrUrl = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg'];
+			var arrText = ['第一张图片','第二张图片','第三张图片','第四张图片','第五张图片'];
+			var num = 0;
+			var onOff = '循环播放';//开关里不光只能放布尔值的，还可以放别的
+			function fnTab(){
+				img.src= 'imgs/'+arrUrl[num];
+				text.innerHTML =arrText[num];
+				span1.innerHTML = num+1 + '/' + arrUrl.length;
+			};
+			fnTab();
+			//公用的部分用函数封装起来，简化代码量；并且方便调用；
+			button1.onclick = function(){
+				onOff ='循环播放'; 
+				p1.innerHTML = '图片可循环切换';
+			};
+			//点击顺序播放
+			button2.onclick = function(){
+				onOff ='顺序播放'; //此处不能用到不等号
+				p1.innerHTML = '图片可在第一张至最后一张之间切换';
+			};
+			//点击循环播放
+			//点击下一张
+			next.onclick = function(){
+				num++;//num自增
+				if(onOff =='循环播放' && num>arrUrl.length-1){
+					//判断条件。当点击next的时候。
+					//就执行循环播放，否则执行顺序播放
+						num=0;
+				}else if(num>arrUrl.length-1){
+						num=arrUrl.length-1;
+						alert('已经是最后一张了');
+				}
+				fnTab();//调用函数
+			};
+			prev.onclick = function(){
+				num--;//num自减
+				if(onOff == '循环播放' && num<0){
+					//点击prev的时候，如果是循环播放，就执行else前面的代码，否则执行后面的代码；
+						num=arrUrl.length-1;
+				}else if(num<0){
+					num=0;
+					alert('已经是第一张了');
+				}
+				fnTab();//调用函数
+			};
+		</script>
+	</body>
+</html>

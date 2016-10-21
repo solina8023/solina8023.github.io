@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 50px;
+				height: 50px;
+				background:red;
+				margin-right: 10px;
+				position: absolute;
+				top: 0;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="tween.js"></script>
+		<script type="text/javascript" src="mTween.js"></script>
+		<script>
+			var divs = document.getElementsByTagName('div');
+			var arr = ['red','orange','yellow','green','lightgreen','blue','purple'];
+			//生成div
+			var str = '';
+			var len = 12;
+			for(var i=0;i<len;i++){
+				str += '<div style="left:'+i*55+'px;background:'+arr[i%arr.length]+'"></div>';
+			}
+			document.body.innerHTML=str;
+			
+			//需要得到一下变量；
+			var onOff = 'true';//添加一个开关判断它当前的状态
+			document.onclick = function(){
+				if(onOff){
+					for(var i=0;i<divs.length;i++){
+						fup(i,i*100);
+						onOff = false;
+					}
+				}else{
+					for(var i=0;i<divs.length;i++){
+						fdown(i,i*100);
+						onOff = true;
+					}
+				}
+			}
+			function fup(n,top){//让上面的div下来。引入函数，传参
+				setTimeout(function(){
+					mTween(divs[n],'top',400,3000,'easeBothStrong');
+				},top)
+			}
+			function fdown(n,top){//让下面的回去，引入，传参
+				setTimeout(function(){
+					mTween(divs[n],'top',20,3000,'elasticIn');
+				},top)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width: 400px;
+				height: 30px;
+				line-height: 30px;
+				background: forestgreen;
+				font-size: 16px;
+				color: #fff;
+				text-indent: 20px;
+			}
+			#list{
+				margin: 0;
+				padding: 0;
+				width: 400px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 20px;
+				color: #000;
+				text-indent: 20px;	
+			}
+			#list li{
+					height: 50px;
+					list-style: none;
+					border-bottom: 1px solid #ccc;
+					position: relative;
+				}
+			#list li img{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 160px;
+				top: -8px;
+			}
+			.active{
+				display: block;
+			}
+			.lazy{
+				height: 30px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<section>分类名称</section>
+		<ul id="list">
+			<li>
+				<div>
+					<p>远程课堂</p>
+					<img src="img/pen.png"/>
+				</div>
+				<div class="lazy">
+					<input type="text" value="">
+					<input type="button" value="保存">
+					<input type="button" value="取消">
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>远程课堂</p>
+					<img src="img/pen.png"/>
+				</div>
+				<div class="lazy">
+					<input type="text" value="">
+					<input type="button" value="保存">
+					<input type="button" value="取消">
+				</div>
+			</li>
+		</ul>
+		<script>
+//			var lis = document.getElementsByTagName('li');
+//			var imgs = document.getElementsByTagName('img');
+//			var divs = document.getElementsByTagName('div');
+//			var buts = document.getElementsByTagName('input');
+//			var ps = document.getElementsByTagName('p');
+//			//点击第一支笔的时候；
+//			imgs[0].onclick = function(){
+//				divs[0].className = 'lazy';
+//				divs[1].className = 'active';
+//			}
+//			//点击确定按钮的时候；
+//			buts[1].onclick = function(){
+//				//如果输入的内容是空，返回到前一次的状态
+//				if(buts[0].value == ''){
+//					divs[0].className = 'active';
+//					divs[1].className = 'lazy';
+//					return;//如果不返回的话，代码会继续执行下面的程序，会发生冲突
+//				}
+//				ps[0].innerHTML = buts[0].value;
+//				divs[0].className = 'active';
+//				divs[1].className = 'lazy';
+//			};
+//			buts[2].onclick = function(){
+//				divs[0].className = 'active';
+//				divs[1].className = 'lazy';
+//			};
+			//把所有的样式全部实现了。现在开始写传参；即把所有的东西用函数包起来：
+			//li在前面已经获取了：
+			var lis = document.getElementsByTagName('li');
+			for(var i=0;i<lis.length;i++){
+				fn(lis[i]);//实参的具体数值。这里有两个li.
+			}				//所以它代表的就是lis[0]、lis[1]；
+			//通过实参传入到形参一个名字、a,这个名字是自己随便起的
+			function fn(a){//可以把获得的元素前面的document用形参替换掉；
+				//因为所有的元素都是从同一个li下获取的
+				var imgs = a.getElementsByTagName('img');
+				var divs = a.getElementsByTagName('div');
+				var buts = a.getElementsByTagName('input');
+				var ps = a.getElementsByTagName('p');
+				//点击第一支笔的时候；
+				imgs[0].onclick = function(){
+					divs[0].className = 'lazy';
+					divs[1].className = 'active';
+				}
+				//点击确定按钮的时候；
+				buts[1].onclick = function(){
+					//如果输入的内容是空，返回到前一次的状态
+					if(buts[0].value == ''){
+						divs[0].className = 'active';
+						divs[1].className = 'lazy';
+						return;//如果不返回的话，代码会继续执行下面的程序，会发生冲突
+					}
+					ps[0].innerHTML = buts[0].value;
+					divs[0].className = 'active';
+					divs[1].className = 'lazy';
+				};
+				buts[2].onclick = function(){
+					divs[0].className = 'active';
+					divs[1].className = 'lazy';
+				};
+			}
+		</script>
+	</body>
+</html>
