@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <!--<h2>Javascript题目</h2>
+    <h3>求斐波那契数列第n个数的值。题目说明如下：</h3>
+    <p>1.斐波那契数列指的是这样一个数列 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...这个数列从第3项开始，每一项都等于前两项之和。</p>
+    <p>2.n从1开始，例如，第1项是0，第2项是1，第4项是2。(n > 0)</p>
+    <p>3.请修改右边的js函数<strong style="color: red;">fib</strong>，并使得下面结果区能展示正常的结果。</p>
+
+    <h2>结果区test</h2>-->
+    <div id="result"></div>
+    <script>
+        function fib(n) {
+            var result = null;
+            var arr = [1,1];
+            /*
+                n=1 1
+                n=2 1
+                n=3 2
+                n=4 3
+                n=5 5
+                n=6 8
+                n=7 13
+                n=8 21
+                n=9 34
+                n=10 55
+             */
+            
+
+            switch(n){
+            	//如果
+                case -1: result = -1;
+                break;
+                //如果
+                case 0: result = 0;
+                break;
+                default://之前条件都不成立；
+                    add(n);
+                    fun(n);
+            }
+            //封装两个自己解析的函数
+            function add(n){
+                for (var i=0;i<n-3;i++) {
+                    arr.push(arr[i]+arr[i+1]);
+                } 
+            }
+            // console.log(arr);
+
+            function fun(n){
+                for (var i=0;i<n-1;i++) {
+                    result = arr[n-2]+arr[n-3];
+                }
+            }
+            return result;
+        };
+        var testCases = [10, 20, 30, 100, -1, 0];
+        var $resultEle = document.getElementById('result');
+        testCases.forEach(function (n) {
+          var result = fib(n);
+          var $ele = document.createElement('p');
+          $ele.innerHTML = '第' + n + '个数是：' + result;
+          $resultEle.appendChild($ele);
+        });
+    </script>
+</body>
+</html>
