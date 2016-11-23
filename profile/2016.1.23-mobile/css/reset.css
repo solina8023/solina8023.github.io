@@ -1,0 +1,40 @@
+body{
+	margin: 0;
+	font-family: Helvetica;
+	color: #666;
+	position: relative;
+}
+h1,h2,p{
+	margin: 0;
+	font-weight: normal;
+}
+img{
+	border: none;
+	vertical-align: top;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+a,input,button{/*移动端点击的黑色阴影*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input,textarea{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+textarea{
+	resize: none;
+	overflow: auto;
+}
+i{
+	font-style: normal;
+}
