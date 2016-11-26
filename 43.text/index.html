@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	div{
+		width: 2px;
+		height: 2px;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<input type="color" name="" id="color">
+	<script type="text/javascript">
+	var color = document.getElementById('color');
+	var c = 'black';
+	color.oninput = function(){
+		c = this.value;
+	};
+
+	document.onmousedown = function(){
+		document.onmousemove = function(ev){
+			var div = document.createElement('div');
+			div.style.left = ev.clientX+'px';
+			div.style.top = ev.clientY+'px';
+			div.style.background = c;
+			document.body.appendChild(div);
+		};
+
+		document.onmouseup = function(){
+			this.onmousemove = null;
+		};	
+	};
+	</script>
+</body>
+</html>
